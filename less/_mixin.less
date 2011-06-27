@@ -1,0 +1,264 @@
+/*
+ * #border      > .border-radius    ( radius                                                                              );
+ *              > .multi-radius     ( topleft, topright, bottom right, bottom left                                        );
+ *
+ * #shadow      > .box-shadow       ( horz:0px, vert:1px, blur:2px, color:#ccc                                            );
+ *              > .inset-box-shadow ( horz:0px, vert:1px, blur:2px, color: #ccc                                           );
+ *              > .test-shadow      ( color:#ccc, @arg: 0px 0px 20px                                                      );
+ *
+ * #gradient    > .v                ( colorstart:#efefef, colorend:595959                                                 );
+ *              > .h                ( colorstart:#efefef, colorend:595959                                                 );
+ *              > .v3               ( colorstart:, colormiddle, middleposition, colorend                                  );
+ *              > .h3               ( colorstart:, colormiddle, middleposition, colorend                                  );
+ *              > .v4               ( colorstart:, color2, pos2, color3, pos3, colorend                                   );
+ *              > .h4               ( colorstart:, color2, pos2, color3, pos3, colorend                                   );
+ *
+ * #animate     > .transition       ( property[width], duration[2s], timing[linear, ease, ease-in, ease-out, ], delay[2s] );
+ *              > .transform        ( @val                                                                                );
+ *              > .skew             ( angle x:35, angle y:0                                                               );
+ *              > .scale            ( scale-x:1                                                                           );
+ *              > .rotate           ( angle:35                                                                            );
+ *              > .translate        ( move-x:10px, move-7:10px                                                            );
+ *
+ * #transparent > .background       ( color: @white; @alpha:1                                                             );
+ *              > .border           ( color:@white, alpha:1                                                               );
+ *              > .opacity          ( 100                                                                    ); this is in %
+ *
+ *  .box-sizing ( @val:border-box );
+ *  .size ( width:5px, height:5px );
+ *  .content-columns ( count, gap );
+ */
+
+
+
+#border {
+    .border-radius(@radius:5px){
+        -webkit-background-clip: padding-box;
+        -webkit-border-radius: @radius;
+        -moz-background-clip: padding-box;
+        -moz-border-radius: @radius;
+        border-radius: @radius;
+        background-clip: padding-box;
+    }
+    .multi-radius (@topLeft: 5px, @topRight: 5px, @bottomRight: 5px, @bottomLeft: 5px) {
+        -webkit-border-top-left-radius: @topLeft;
+        -webkit-border-top-right-radius: @topRight;
+        -webkit-border-bottom-right-radius: @bottomRight;
+        -webkit-border-bottom-left-radius: @bottomLeft;
+        -moz-border-radius-topleft: @topLeft;
+        -moz-border-radius-topright: @topRight;
+        -moz-border-radius-bottomright: @bottomRight;
+        -moz-border-radius-bottomleft: @bottomLeft;
+        border-top-left-radius: @topLeft;
+    }
+}
+#shadow {
+    .box-shadow(@horizontal: 0px, @vertical: 1px, @blur: 2px, @color: #CCC) {
+        -webkit-box-shadow: @horizontal @vertical @blur @color;
+        -moz-box-shadow: @horizontal @vertical @blur @color;
+        box-shadow: @horizontal @vertical @blur @color;
+    }
+    .inset-box-shadow(@horizontal: 0px, @vertical: 1px, @blur: 2px, @color: #CCC) {
+        -webkit-box-shadow: inset @horizontal @vertical @blur @color;
+        -moz-box-shadow: inset @horizontal @vertical @blur @color;
+        box-shadow: inset @horizontal @vertical @blur @color;
+    }
+    .text-shadow (@color: #ccc, @arg:0px 0px 20px) {
+        text-shadow: @color @arg;
+    }
+}
+
+
+#gradient {  
+    /* Top-to-Bottom Gradient */
+    .v(@start:#efefef, @end:#595959){
+        background: (@start + @end) / 2; // Non CSS3 browsers get the average color
+        background-image: -moz-linear-gradient(top,  @start, @end); // FF 3.6
+        background-image: -webkit-gradient(linear, left top, left bottom, from(@start), to(@end)); // Safari 4+, Chrome
+        background-image: -webkit-linear-gradient(top, @start, @end); // Chrome 10+, Safari 5.1+
+        background-image: -o-linear-gradient(top, @start, @end); // Opera 11.10+
+        background-image: linear-gradient(top, @start, @end); // CSS3
+        filter: %("progid:DXImageTransform.Microsoft.gradient(startColorstr=%d, endColorstr=%d)", @start, @end); // IE6 & 7
+        -ms-filter: %("progid:DXImageTransform.Microsoft.gradient(startColorstr=%d, endColorstr=%d)", @start, @end); // IE8
+        background-image: -ms-linear-gradient(top, @end, @end); // IE10
+    }
+
+    /* Left-to-Right Gradient */
+    .h(@start:#efefef, @end:#595959){
+        background: (@start + @end) / 2; // Non CSS3 browsers get the average color
+        background-image: -moz-linear-gradient(left,  @start, @end); // FF 3.6
+        background-image: -webkit-gradient(linear, left center, right center, from(@start), to(@end)); // Safari 4+, Chrome
+        background-image: -webkit-linear-gradient(left center, right center, from(@start), to(@end)); // Chrome 10+, Safari 5.1+
+        background-image: -o-linear-gradient(left, @start, @end); // Opera 11.10+
+        background-image: linear-gradient(left, @start, @end); // CSS3
+        filter: %("progid:DXImageTransform.Microsoft.gradient(startColorstr=%d, endColorstr=%d, GradientType=1)", @start, @end); // IE6 & 7
+        -ms-filter: %("progid:DXImageTransform.Microsoft.gradient(startColorstr=%d, endColorstr=%d, GradientType=1)", @start, @end); // IE8
+        background-image: -ms-linear-gradient(left, @end, @end); // IE10
+    }
+
+    /* Top-to-Bottom 3 Stop Gradient */
+    .v3(@start, @middle, @middlePos, @end){
+        background: (@start + @end) / 2; // Non CSS3 browsers get the average color
+        background-image: -moz-linear-gradient(top,  @start, @middle @middlePos * 1%, @end); // FF 3.6
+        background-image: -webkit-gradient(linear, left top, left bottom, from(@start), color-stop(@middlePos / 100, @middle), to(@end)); // Safari 4+, Chrome
+        background-image: -webkit-linear-gradient(top, from(@start), color-stop(@middlePos / 100, @middle), to(@end)); // Chrome 10+, Safari 5.1+
+        background-image: -o-linear-gradient(top, @start 0%, @middle @middlePos * 1%, @end 100%); // Opera 11.10+
+        filter: %("progid:DXImageTransform.Microsoft.gradient(startColorstr=%d, endColorstr=%d)", @start, @end); // IE6 & 7
+        -ms-filter: %("progid:DXImageTransform.Microsoft.gradient(startColorstr=%d, endColorstr=%d)", @start, @end); // IE8
+        background-image: linear-gradient(top, @start 0%, @middle @middlePos * 1%, @end 100%); // CSS3
+    }
+
+    /* Left-to-Right 3 Stop Gradient */
+    .h3(@start, @middle, @middlePos, @end){
+        background: (@start + @end) / 2; // Non CSS3 browsers get the average color
+        background-image: -moz-linear-gradient(left,  @start, @middle @middlePos * 1%, @end); // FF 3.6
+        background-image: -webkit-gradient(linear, left center, right center, from(@start), color-stop(@middlePos / 100, @middle), to(@end)); // Safari 4+, Chrome
+        background-image: -webkit-linear-gradient(left, from(@start), color-stop(@middlePos / 100, @middle), to(@end)); // Chrome 10+, Safari 5.1+
+        background-image: -o-linear-gradient(left, @start 0%, @middle @middlePos * 1%, @end 100%); // Opera 11.10+
+        filter: %("progid:DXImageTransform.Microsoft.gradient(startColorstr=%d, endColorstr=%d)", @start, @end); // IE6 & 7
+        -ms-filter: %("progid:DXImageTransform.Microsoft.gradient(startColorstr=%d, endColorstr=%d)", @start, @end); // IE8
+        background-image: linear-gradient(left, @start 0%, @middle @middlePos * 1%, @end 100%); // CSS3
+    }
+
+    /* Top-to-Bottom 4 Stop Gradient */
+    .v4(@color1, @color2, @position2, @color3, @position3, @color4){
+        background: (@color1 + @color4) / 2; // Non CSS3 browsers get the average color
+        background-image: -moz-linear-gradient(top,  @color1, @color2 @position2 * 1%, @color3 @position3 * 1%, @color4); // FF 3.6
+        background-image: -webkit-gradient(linear, left top, left bottom, from(@color1), color-stop(@position2 / 100, @color2), color-stop(@position3 / 100, @color3), to(@color4)); // Safari 4+, Chrome
+        background-image: -webkit-linear-gradient(top, from(@color1), color-stop(@position2 / 100, @color2), color-stop(@position3 / 100, @color3), to(@color4)); // Chrome 10+, Safari 5.1+
+        background-image: -o-linear-gradient(top, @color1 0%, @color2 @position2 * 1%, @color3 @position3 * 1%, @color4 100%); // Opera 11.10+
+        filter: %("progid:DXImageTransform.Microsoft.gradient(startColorstr=%d, endColorstr=%d)", @color1, @color4); // IE6 & 7
+        -ms-filter: %("progid:DXImageTransform.Microsoft.gradient(startColorstr=%d, endColorstr=%d)", @color1, @color4); // IE8
+        background-image: linear-gradient(top, @color1 0%, @color2 @position2 * 1%, @color3 @position3 * 1%, @color4 100%); // CSS3
+    }
+
+    /* Left-to-Right 4 Stop Gradient */
+    .h4(@color1, @color2, @position2, @color3, @position3, @color4){
+        background: (@color1 + @color4) / 2; // Non CSS3 browsers get the average color
+        background-image: -moz-linear-gradient(left,  @color1, @color2 @position2 * 1%, @color3 @position3 * 1%, @color4); // FF 3.6
+        background-image: -webkit-gradient(linear, left center, right center, from(@color1), color-stop(@position2 / 100, @color2), color-stop(@position3 / 100, @color3), to(@color4)); // Safari 4+, Chrome
+        background-image: -webkit-linear-gradient(left center, right center, from(@color1), color-stop(@position2 / 100, @color2), color-stop(@position3 / 100, @color3), to(@color4)); // Chrome 10+, Safari 5.1+
+        background-image: -o-linear-gradient(left, @color1 0%, @color2 @position2 * 1%, @color3 @position3 * 1%, @color4 100%); // Opera 11.10+
+        filter: %("progid:DXImageTransform.Microsoft.gradient(startColorstr=%d, endColorstr=%d, GradientType=1)", @color1, @color4); // IE6 & 7
+        -ms-filter: %("progid:DXImageTransform.Microsoft.gradient(startColorstr=%d, endColorstr=%d, GradientType=1)", @color1, @color4); // IE8
+        background-image: linear-gradient(left, @color1 0%, @color2 @position2 * 1%, @color3 @position3 * 1%, @color4 100%); // CSS3
+    }
+}
+//end gradient
+
+#animate {
+    .transition(@params){
+        -webkit-transition: @params; // Safari 3.2+, Chrome
+           -moz-transition: @params; // FF4+
+            -ms-transition: @params; // IE10
+             -o-transition: @params; // Opera 10.5+
+                transition: @params; // CSS3
+    }
+
+    .transform (@value: scale(1)) 
+    {
+        -webkit-transform : @value;
+        -moz-transform    : @value;
+        -o-transform      : @value;
+        transform         : @value;
+    }
+
+    .skew (@angle-x: 35, @angle-y: 0) 
+    {
+        -webkit-transform : skew(formatstring("{0}deg", @angle-x), formatstring("{0}deg", @angle-y));
+        -moz-transform    : skew(formatstring("{0}deg", @angle-x), formatstring("{0}deg", @angle-y));
+        -o-transform      : skew(formatstring("{0}deg", @angle-x), formatstring("{0}deg", @angle-y));
+        -ms-transform     : skew(formatstring("{0}deg", @angle-x), formatstring("{0}deg", @angle-y));
+        transform         : skew(formatstring("{0}deg", @angle-x), formatstring("{0}deg", @angle-y));
+    }
+
+    .scale (@scale-x: 1) 
+    {
+        -webkit-transform : scale(@scale-x);
+        -moz-transform    : scale(@scale-x);
+        -o-transform      : scale(@scale-x);
+        -ms-transform     : scale(@scale-x);
+        transform         : scale(@scale-x);
+    }
+
+    .rotate (@angle: 35) 
+    {
+        -webkit-transform : rotate(formatstring("{0}deg", @deg));
+        -moz-transform    : rotate(formatstring("{0}deg", @deg));
+        -o-transform      : rotate(formatstring("{0}deg", @deg));
+        -ms-transform     : rotate(formatstring("{0}deg", @deg));
+        transform         : rotate(formatstring("{0}deg", @deg));
+    }
+
+    .translate (@move-x: 10px, @move-y: 10px) 
+    {
+        -webkit-transform : translate(@move-x, @move-y);
+        -moz-transform    : translate(@move-x, @move-y);
+        -o-transform      : translate(@move-x, @move-y);
+        -ms-transform     : translate(@move-x, @move-y);
+        transform         : translate(@move-x, @move-y);
+    }
+}
+//end animate
+
+
+#transparent {
+    .background(@color: @white, @alpha: 1) {
+        background-color: hsla(hue(@color), saturation(@color), lightness(@color), @alpha);
+    }
+
+    .border(@color: @white, @alpha: 1) {
+            border-color    : hsla(hue(@color), saturation(@color), lightness(@color), @alpha);
+            background-clip : padding-box;
+    }
+    .opacity(@op: 100) {
+            filter         : e(%("alpha(opacity=%d)", @opacity));
+            -khtml-opacity : @op / 100;
+            -moz-opacity   : @op / 100;
+            opacity        : @op / 100;
+    }
+}
+
+
+//layout related mixin
+.box-sizing(@box-sizing: border-box) 
+{
+    -webkit-box-sizing: @box-sizing;
+    -moz-box-sizing:    @box-sizing;
+    box-sizing:         @box-sizing;
+}
+
+.size(@width: 5px, @height: 5px) {
+	height : @height;
+	width  : @width;
+}
+
+.content-columns(@columnCount:2, @columnGap : 20px) {
+	-webkit-column-count              : @columnCount;
+	-webkit-column-gap                : @columnGap;
+	-moz-column-count                 : @columnCount;
+	-moz-column-gap                   : @columnGap;
+	column-count                      : @columnCount;
+	column-gap                        : @columnGap;
+}
+
+
+// background related mixin
+.background-size (@arguments:cover) {
+  -webkit-background-size: @arguments;
+     -moz-background-size: @arguments;
+          background-size: @arguments;
+}
+
+//button related
+.pos ( @posStart:0 0, @posEnd: 10px 10px ){
+    background-position: @posStart; 
+    &:hover{ background-position: @posEnd; }
+}
+
+.btncolor( @color: @white ) {
+    background-color:@color;
+    &hover {
+        background-color: darken(@color, 40%);
+    }
+}

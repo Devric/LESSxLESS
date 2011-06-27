@@ -1,0 +1,68 @@
+/*****************************
+        fluid
+ ****************************/
+/* use c6 or c4 with row to setup column width                   */
+/* use nested .row.c6 or .c4 to establish 12 and 8 column layout */
+/* use .last to kill the margin at the last column               */
+@gutter: 2.6%;
+#grid {  
+    .c4, .c6 {
+        .row, .row .row {
+            width:100%;
+            margin:5px auto;
+            clear:both;
+            display: block;
+            position: relative;
+        }
+    .row .row { margin:0; position: relative; }
+    .col { margin-right: @gutter; float:left; } 
+    .last { margin-right:0; float:right; }
+    } 
+}
+.c4 .g1 { width:23.05%; }
+.c4 .g3 { width:74.35%; }
+
+.c6 .g1 { width: 14.5%; }
+.c6 .g2 { width: 31.6%; }
+.c6 .g4 { width: 65.8%; }
+.c6 .g5 { width: 82.9%; }
+
+.c4 .g2, .c6 .g3 { width:48.7%; }
+.c4 .g4, .c6 .g6 { width:100%; margin:0; }
+
+.c4 .push(@grid:1) { margin-left: (@grid * 25.65% ); }
+.c6 .push(@grid:1) { margin-left: (@grid * 17.1% ); }
+
+///* 
+// * @grids: 4; 
+// * @gut: 2.6;
+// * @pad:0;
+// * 
+// * #fluid {
+// * 
+// *     @col: @content / @grids - @gut;
+// * 
+// *     // calculations
+// *
+// *     @content : 100 - ( 2 * @pad ); 
+// *     @row-pad : 2 * @pad;
+// * 
+// * 
+// *     .col ( @grid : 1 ) {
+// *         displat:inline;
+// *         float:left;
+// *         width: ( @col + @gut) * @grid - @gut; 
+// *     }
+// *     .push {
+// * 
+// *     }
+// *     .last { margin-right:0; }
+// * 
+// *     .g1 { .col(1); }
+// *     .g2 { .col(2); }
+// *     .g3 { .col(3); }
+// *     .g4 { .col(4); }
+// *     .g5 { .col(5); }
+// * 
+// * }
+// */

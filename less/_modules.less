@@ -1,0 +1,202 @@
+/* ========================= //
+// =Scrollbars like twitter= //
+// ========================= */
+
+.scrollbar (@color: rgba(0, 0, 0, 0.2), @width: 7px, @height: 9px, @border-radius: 4px) {
+  overflow: auto;
+  padding-right:5px;
+
+  &::-webkit-scrollbar {
+    width: @width;
+    height: @height;
+  }
+
+  &::-webkit-scrollbar-button:start:decrement,
+  &::-webkit-scrollbar-button:end:increment {
+    display: block;
+    height: 0;
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-track-piece {
+    -webkit-border-radius: 0;
+    -webkit-border-bottom-right-radius: @border-radius;
+    -webkit-border-bottom-left-radius: @border-radius;
+  }
+
+  &::-webkit-scrollbar-thumb:vertical {
+    height: 50px;
+    background-color: @color;
+    -webkit-border-radius: @border-radius;
+  }
+
+  &::-webkit-scrollbar-thumb:horizontal {
+    width: 50px;
+    background-color: @color;
+    -webkit-border-radius: @border-radius;
+  }
+}
+
+// ========================= //
+// =    button             = //
+// ========================= //
+
+/* 
+ * button: .button ( color:#f5f5f5, textcolor:333, paddding: 9px 10px 0 10px, borderradius:6px )
+ * button: .callToAction ( #fff )
+ */
+
+// button with underscore
+.btn_bar(   @color: #f5f5f5, 
+            @textColor: #333, 
+            @padding: 9px 10px 0 10px, 
+            @borderRadius: 6px) 
+    {
+        display: inline-block;
+        #gradient > .v(@color,darken(saturate(@color,10),10));
+        padding: @padding;
+        @textShadow: 0 1px 1px rgba(255,255,255,.75); 
+        text-shadow: @textShadow;
+        color: @textColor;
+        a { color: @textColor; text-decoration: none; }
+        line-height: 20px;
+        #border > .border-radius(@borderRadius);
+        @shadow: inset 0 1px 0 rgba(255,255,255,.2), inset 0 -1px 0 rgba(0,0,0,.2), 0 1px 2px rgba(0,0,0,.25);
+        #shadow > .box-shadow(@shadow);
+
+        &:hover {
+            background-position: 0 -15px;
+            color: @textColor;
+            text-decoration: none;
+    }
+}
+
+
+// gradient buttn
+
+.coolbtn(@buttonColor: #c97200, @fontsize:20px){
+  // slave colors
+  @defaultStart: @buttonColor + 35%;
+  @defaultEnd: @buttonColor;
+  @borderColor: @buttonColor - 50%;
+  
+  // button positioning
+  .clear;
+  margin: 6px auto;
+  padding: 9px 6px;
+  
+  // text styles
+  font-size: @fontsize;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  text-shadow: rgba(0,0,0,0.2) -1px 0, rgba(0,0,0,0.2) 0 -1px, rgba(255,255,255,0.2) 0 1px;
+  text-align: center;
+  
+  // box styles
+  border: 1px solid @borderColor;
+  #border > .border-radius(6px);
+  #shadow > .box-shadow(0px 0px 2px @borderColor);
+  #gradient > .v4(@defaultStart, @defaultStart, 46, @defaultEnd, 54, @defaultEnd);
+  
+  a { text-decoration: none; }
+
+  // hover state
+  &:hover{
+    color: #fff;
+    
+    // gradient colors
+    @start: @defaultStart - 20%;
+    @end: @defaultEnd - 20%;
+    
+    #gradient > .v4(@start, @start, 46, @end, 54, @end);
+  }
+  
+  // active (click) state
+  &:active{
+    color: #fff;
+    
+    // gradient colors
+    @start: @defaultStart - 40%;
+    @end: @defaultEnd - 40%;
+    
+    #gradient .v4(@start, @start, 46, @end, 54, @end);
+  }
+}
+
+
+/* ========================= //
+// =   css3 form           = //
+// ========================= */
+
+.sexyform {  
+    form {
+            border: 1px solid #270644;
+            width: 250px;
+            margin:50px auto;
+            padding: 20px;
+            #border > .border-radius( 20px );
+            #shadow > .box-shadow ( 0, -5px, 60px, #270644 );
+            background:-moz-linear-gradient(19% 75% 90deg,#4E0085, #963AD6);
+            background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#963AD6), to(#4E0085));
+        }
+
+        label {
+            font-size: 12px;
+            font-family: arial, sans-serif;
+            list-style-type: none;
+            color: #fff;
+            text-shadow: #000 1px 1px;
+            margin-bottom: 10px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            display: block;
+        }
+
+        input {
+            -webkit-transition-property: -webkit-box-shadow, background;
+            -webkit-transition-duration: 0.25s;
+                padding: 6px;
+                border-bottom: 0px;
+                border-left: 0px;
+                border-right: 0px;
+                border-top: 1px solid #ad64e0;
+                -moz-box-shadow: 0px 0px 2px #000;
+                -webkit-box-shadow: 0px 0px 2px #000;
+                margin-bottom: 10px;
+                background: #8a33c6;
+                width: 230px;
+            &:hover {
+                -webkit-box-shadow: 0px 0px 4px #000;
+                background: #9d39e1;
+            }
+        }
+
+        input.submit {
+            -webkit-transition-property: -webkit-box-shadow, background;
+            -webkit-transition-duration: 0.25s;
+            width: 100px;
+            background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#963AD6), to(#781bb9));   
+            background:  -moz-linear-gradient(19% 75% 90deg,#781bb9, #963AD6);
+            color: #fff;
+            text-transform: uppercase;
+            text-shadow: #000 1px 1px;
+            border-top: 1px solid #ad64e0;
+            margin-top: 10px;
+
+            &:hover {
+                -webkit-box-shadow: 0px 0px 2px #000;
+                #shadow > .box-shadow ( 0, 0, 2p, #000 );
+                background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#963AD6), to(#781bb9));
+                background:  -moz-linear-gradient(19% 75% 90deg,#781bb9, #963AD6);
+            } 
+
+            &:active {
+                background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#781bb9), to(#963AD6));
+                background:  -moz-linear-gradient(19% 75% 90deg,#963AD6, #781bb9);
+            }
+
+        }
+}
