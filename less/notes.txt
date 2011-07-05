@@ -55,6 +55,8 @@
      |                 |                                                              |
      | buttons         | .pos (startPos: 0 0, endPos: 10px 10px)                      |
      |                 | .btncolor (color: @white ); /include &hover darken@white 40% |
+     |                 |                                                              |
+     | link            | .link ( @a:eee ); // include darken @a:eee 40%               |
      | --------------  | ---------------------------------------------------------    |
      | fonts           |                                                              |
      | **************  |                                                              |
@@ -131,3 +133,4 @@
 **** polarize
 **** product
 *** mixins
+

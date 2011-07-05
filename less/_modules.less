@@ -200,3 +200,49 @@
 
         }
 }
+
+/* ========================= //
+// =   tool tips           = //
+// ========================= */
+/*
+ * dtip module TOOLS TIPS
+ *
+ * appy .dtip-container(width, margin); to any element eg: #tiped
+ *
+ * structure:
+ * #tiped > the visible content 
+ *
+ * */
+
+.dtip-container(@contentwidth: 100%, @contentmargin:0) {
+    position:relative;
+    overflow:visible;
+    z-index:999999;
+
+    &:hover .dtip-content {
+        opacity:1;
+        #animate > .transition( opacity 1s ease-in-out );
+    }
+    .dtip-content {
+        width: @contentwidth;
+        margin: @contentmargin;
+        top:-30px;
+        color:#fff;
+        font-size:12px;
+        padding:4px 8px;
+        position:absolute;
+	border: 1px solid rgba(255,255,255,0.25);
+	background-color: rgb(25,25,25);
+	background-color: rgba(25,25,25,0.92);
+        #gradient > .h(transparent, #000)
+
+	#border > .border-radius: 3px;
+        #shadow > .box-shadow( 0 0 3px #555; )
+
+        zoom:1;
+        opacity:0;
+        #animate > .transition( opacity 0.4s ease-in-out );
+        ms-filter: ~"progid:DXImageTransform.Microsoft.Alpha(Opacity=%50)";
+	filter: ~"alpha(opacity=%50)";
+    }
+}
