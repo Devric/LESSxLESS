@@ -23,11 +23,11 @@ h2, .large { @font:4em; font-size: @font; line-height: @line/@font*3; }
 h3, .bigger { @font:3em; font-size:@font; line-height: @line/@font*2; }
 h4, .big { @font:2em; font-size:@font; line-height: @line/@font*1.5; margin-bottom: @line/@font; margin-top:@line/@font/2; }
 h5, .strong { @font:1.5em; font-size:@font; line-height: @line/@font/4; margin-bottom: @line/@font; margin-top:@line/@font/4; }
-h6, .small, small { @font:1em; font-size:@font; line-height: @line/@font/9; margin-bottom: @line/@font; margin-top:@line/@font/9; }
+h6, .small, small { @font:1em; font-size:@font; margin-bottom: @line/@font; margin-top:@line/@font/9; }
+.tiny { @font:0.9em; font-size:@font; padding:@line/(@font*5) 0; }
 
-p {@font:1em; margin-bottom: @line/@font; word-wrap:break-word; }
-em {font-style: italic;}
-
+p {@font:1em; margin-bottom: @line/@font/2.5; word-wrap:break-word; }
+i, em {font-style: italic;}
 
 
 /* ================== //
@@ -164,7 +164,45 @@ p.presslight {
     padding:10px;
 }
 
-blockquote { margin: 1em 3em; color: #999; border-left: 2px solid #999; padding-left: 1em; }
-blockquote.mag { float:right; font-family:Georgia, Arial, Serif; font-size:1.25em; background:none; width:150px; border-top:#4C739E 3px solid; border-bottom:#4C739E 3px solid; border-left:none; margin:1em; padding:1em; color:#4C739E; }
+blockquote {
+    color: #999;
+    border-left: 2px solid #999;
+    padding-left: 1em;
+}
+blockquote.mag {
+    float:right;
+    font-family:Georgia, Arial, Serif;
+    font-size:1.25em;
+    background:none;
+    width:150px;
+    border-top:#4C739E 3px solid;
+    border-bottom:#4C739E 3px solid;
+    border-left:none;
+    margin:1em;
+    padding:1em;
+    color:#4C739E;
+}
+
+blockquote.quote {
+    quotes:"\201C""\201D";
+    /* quotes:"\201C""\201D""\2018""\2019"; */
+    border:0;
+        &:before {
+            color:#ccc;
+            content:open-quote;
+            font-size:6em;
+            line-height:.8em;
+            margin-left:-.6em;
+            vertical-align:-.4em;
+            float:left;
+        }
+
+        .author a {
+            font-weight:bold;
+            color: darken( @blue, 10% );
+            &:hover { color: darken( @blue, 20% ); }
+        }
+}
+
 
 pre { border:1px dashed #E1E1E1; color:#333344; background:#FAFAFA; font-family:monospace; overflow:auto; font-size:11px; padding:0.5em; }

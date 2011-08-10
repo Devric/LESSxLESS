@@ -212,15 +212,18 @@ h5, .strong {
 }
 h6, .small, small {
   font-size: 1em;
-  line-height: 0.16666666666666666em;
   margin-bottom: 1.5em;
   margin-top: 0.16666666666666666em;
 }
+.tiny {
+  font-size: 0.9em;
+  padding: 0.3333333333333333em 0;
+}
 p {
-  margin-bottom: 1.5em;
+  margin-bottom: 0.6em;
   word-wrap: break-word;
 }
-em {
+i, em {
   font-style: italic;
 }
 /* ================== //
@@ -357,7 +360,6 @@ p.presslight {
   padding: 10px;
 }
 blockquote {
-  margin: 1em 3em;
   color: #999;
   border-left: 2px solid #999;
   padding-left: 1em;
@@ -374,6 +376,28 @@ blockquote.mag {
   margin: 1em;
   padding: 1em;
   color: #4C739E;
+}
+blockquote.quote {
+  quotes: "\201C" "\201D";
+  /* quotes:"\201C""\201D""\2018""\2019"; */
+
+  border: 0;
+}
+blockquote.quote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 6em;
+  line-height: .8em;
+  margin-left: -0.6em;
+  vertical-align: -0.4em;
+  float: left;
+}
+blockquote.quote .author a {
+  font-weight: bold;
+  color: #0393cd;
+}
+blockquote.quote .author a:hover {
+  color: #036f9a;
 }
 pre {
   border: 1px dashed #E1E1E1;
@@ -719,6 +743,15 @@ body {
 /* ========================= //
 // =   tool tips           = //
 // ========================= */
+/*
+ * dtip module TOOLS TIPS
+ *
+ * appy .dtip-container(width, margin); to any element eg: #tiped
+ *
+ * structure:
+ * #tiped > the visible content 
+ *
+ * */
 /* Grays *//* Accent Colors */
 html {
   overflow: none;
