@@ -1,33 +1,33 @@
-/* the true leading = line height - font size */
-@leading:@line - @fontpxem; 
-
-/* body font size in percentages */
-@bodyfont:100% * (@fontpx/16);
-
-/* line height in ems */ 
-@line:@linepx/@fontpx * 1em; 
-
+@leading:@line - @fontpxem; /* the true leading = line height - font size */
+@bodyfont:100% * (@fontpx/16); /* body font size in percentages */
+@line:@linepx/@fontpx * 1em; /* line height in ems */ 
 @fontpxem:@fontpx * 1em; /* convert to em */
 @linepxem:@linepx * 1em; /* convert to em */
 
-body {
-	font-size: @bodyfont;
-	line-height: @line;
-	font-family: @fontfamily;}
-	
+body { line-height: @line; font-size:   @bodyfont; font-family: @fontfamily; }
 h1,h2,h3,h4,h5,h6,strong { font-weight: bold; }
 
-.gigantic { @font:20em; font-size: @font; line-height: @line/@font*14; margin-bottom: 10px; }
-h1, .huge { @font:5em; font-size: @font; line-height: @line/@font*4; }
-h2, .large { @font:4em; font-size: @font; line-height: @line/@font*3; }
-h3, .bigger { @font:3em; font-size:@font; line-height: @line/@font*2; }
-h4, .big { @font:2em; font-size:@font; line-height: @line/@font*1.5; margin-bottom: @line/@font; margin-top:@line/@font/2; }
-h5, .strong { @font:1.5em; font-size:@font; line-height: @line/@font/4; margin-bottom: @line/@font; margin-top:@line/@font/4; }
-h6, .small, small { @font:1em; font-size:@font; margin-bottom: @line/@font; margin-top:@line/@font/9; }
-.tiny { @font:0.9em; font-size:@font; padding:@line/(@font*5) 0; }
+.gigantic           { @font:20em;  font-size:@font; line-height: @line/@font*14;  }
+h1, .huge           { @font:5em;   font-size:@font; line-height: @line/@font*4;   }
+h2, .large          { @font:4em;   font-size:@font; line-height: @line/@font*3;   }
+h3, .bigger         { @font:3em;   font-size:@font; line-height: @line/@font*2;   }
+h4, .big            { @font:2em;   font-size:@font; line-height: @line/@font*1.5; }
+h5, .strong, strong { @font:1.5em; font-size:@font; line-height: @line/@font/4;   }
+h6, .small, small   { @font:1em;   font-size:@font; line-height: @line/@font;     }
+.tiny               { @font:0.9em; font-size:@font; padding:@line/(@font*5) 0;    }
 
-p {@font:1em; margin-bottom: @line/@font/2.5; word-wrap:break-word; }
+p {@font:1em; font-size:@font; word-wrap:break-word; }
 i, em {font-style: italic;}
+
+.justify { text-align:justify; }
+a { text-decoration:none; }
+
+/* Block Baselines */
+h1, h2, h3, h4, h5, h6,
+p, ul, ol, pre, blockquote,
+textarea, button {
+    margin: 5px 0 15px;
+}
 
 
 /* ================== //
@@ -157,31 +157,10 @@ p.press {
     #shadow > .text-shadow(#555, 0 2px 3px);
 }
 
-p.presslight {
-    color:#eee;
-    background-color:#ddd;
-    text-shadow: 0px -1px 2px #374683;
-    padding:10px;
-}
+p.presslight { color:#eee; background-color:#ddd; text-shadow: 0px -1px 2px #374683; padding:10px; }
 
-blockquote {
-    color: #999;
-    border-left: 2px solid #999;
-    padding-left: 1em;
-}
-blockquote.mag {
-    float:right;
-    font-family:Georgia, Arial, Serif;
-    font-size:1.25em;
-    background:none;
-    width:150px;
-    border-top:#4C739E 3px solid;
-    border-bottom:#4C739E 3px solid;
-    border-left:none;
-    margin:1em;
-    padding:1em;
-    color:#4C739E;
-}
+blockquote { color: #999; border-left: 2px solid #999; padding-left: 1em; }
+blockquote.mag { float:right; font-family:Georgia, Arial, Serif; font-size:1.25em; background:none; width:150px; border-top:#4C739E 3px solid; border-bottom:#4C739E 3px solid; border-left:none; margin:1em; padding:1em; color:#4C739E; }
 
 blockquote.quote {
     quotes:"\201C""\201D";
@@ -205,4 +184,6 @@ blockquote.quote {
 }
 
 
-pre { border:1px dashed #E1E1E1; color:#333344; background:#FAFAFA; font-family:monospace; overflow:auto; font-size:11px; padding:0.5em; }
+
+pre { border:1px dashed #E1E1E1; color:#333344; background:#FAFAFA; font-family:monospace; overflow:auto; font-size:11px; padding:1em; }
+
