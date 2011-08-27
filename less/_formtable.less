@@ -1,33 +1,17 @@
 /* Form
 ---------------------------------------- */
-fieldset {
-    padding: 1em;
-}
+fieldset { padding: 1em; }
+legend { font-weight: bold; padding: 0 .25em; }
 
-legend {
-    font-weight: bold;
-    padding: 0 .25em;
-}
-
-input, textarea, select, button {
-    font-family: inherit;
-    font-size: 1em;
-}
+input, textarea, select, button { font-family: inherit; font-size: 1em; }
+input[type=text], input[type=password], textarea { padding: 1px; }
 
 input[type=button], input[type=file], input[type=image], input[type=reset], input[type=submit],
 button[type=button], button[type=reset], button[type=submit] {
     cursor: pointer;
     line-height: 1;
 }
-
-input[type=text], input[type=password], textarea {
-    padding: 1px;
-}
-
-textarea {
-    line-height: 1.25;
-    text-align: left;
-}
+textarea { line-height: 1.25; text-align: left; }
 
 /* Table
 ---------------------------------------- */
@@ -45,7 +29,7 @@ dl {
 }
 
 dl.table {
-    margin-bottom:50px;
-    dt { background:#5f9be3; color:#fff; float:left; font-weight:bold; margin-right:10px; padding:5px; width:100px; }
-    dd { margin:2px 0; padding:5px 0; }
+    margin-bottom:30px;
+    dt { background:@yellow; color:#fff; float:left; font-weight:bold; margin-right:10px; padding:5px; clear:left; }
+    dd {padding-top:10px; float:left; }
 }

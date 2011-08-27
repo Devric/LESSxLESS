@@ -58,10 +58,10 @@
         -moz-box-shadow: @horizontal @vertical @blur @color;
         box-shadow: @horizontal @vertical @blur @color;
     }
-    .inset-box-shadow(@horizontal: 0px, @vertical: 1px, @blur: 2px, @color: #CCC) {
-        -webkit-box-shadow: inset @horizontal @vertical @blur @color;
-        -moz-box-shadow: inset @horizontal @vertical @blur @color;
-        box-shadow: inset @horizontal @vertical @blur @color;
+    .inset-box-shadow(@horizontal: 0px, @vertical: 1px, @blur: 2px, @offset:0, @color: #CCC) {
+        -webkit-box-shadow: inset @horizontal @vertical @blur @offset @color;
+        -moz-box-shadow: inset @horizontal @vertical @blur @offset @color;
+        box-shadow: inset inner @horizontal @vertical @blur @offset @color;
     }
     .text-shadow (@color: #ccc, @arg:0px 0px 20px) {
         text-shadow: @color @arg;
@@ -228,12 +228,12 @@
     box-sizing:         @box-sizing;
 }
 
-.size(@width: 5px, @height: 5px) {
+.size(@width: 100%, @height: 100%) {
 	height : @height;
 	width  : @width;
 }
 
-.content-columns(@columnCount:2, @columnGap : 20px) {
+.columns(@columnCount:2, @columnGap : 20px) {
 	-webkit-column-count              : @columnCount;
 	-webkit-column-gap                : @columnGap;
 	-moz-column-count                 : @columnCount;
@@ -260,5 +260,23 @@
     background-color:@color;
     &hover {
         background-color: darken(@color, 40%);
+    }
+}
+
+.link( @a:#eee ) {
+    a { color:@a; 
+        &:hover { color: lighten(@a, 20%); }
+    }
+}
+
+.linkd( @a:#eee ) {
+    a { color:@a; 
+        &:hover { color: darken(@a, 20%); }
+    }
+}
+
+.linkm( @a:#eee, @b:#eee) {
+    a { color:@a; 
+        &:hover { color: lighten(@b, 20%); }
     }
 }

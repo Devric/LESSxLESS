@@ -1,108 +1,66 @@
 @import "_reset";
 @import "_font";
 @import "_layout";
-@import "_grid";
 @import "_formtable";
 @import "_utility";
 @import "_mixin";
 @import "_modules";
+@import "_grid";
 @import "_var";
 
+//grids variables
+@grids: 12; //# of grids, up to 16
+@gut: 2.6%; //gutter width
+@pad:0; //side paddings
+
 html {
-    overflow:none;
+                /* flow-x, flow-y */
+    #sitebase > .html( hidden, auto );
 }
- 
 /*
 ************************
     basic setup
 ************************
  */
-
-body {             /* padding , overflow */
-    #sitebase > .body(0       , scroll);
-    overflow-x:hidden;
+body {             /* height, padding  */
+    #sitebase > .body(100%, 0);
 }
-
 #site{              /* width , height , bgcolor */
-    #sitebase > .site( 960px , 100%   , #fff)
+    #sitebase > .site( 960px , 100%   , @white);
 }
 
 /* font type */
-@fontpx:12; /* | font size in px     | */
+@fontpx:14; /* | font size in px     | */
 @linepx:18; /* | line height in "px" | */
 @fontfamily: Arial, sans-serif; 
 
 /* font link color */
 a {
-    @linkColor      : #32851b;
-    @linkColorHover : darken(@linkColor, 10);
-
-    color:           @linkColor;
-    &:hover { color: @linkColorHover; }
+    @color : @grey;
+    color  : @color;
+    &:hover {color:darken(@color, 10); }
 }
 
-/*
-************************
-    structure
-************************
- */
+/* =====================
+        structure
+   ===================== */
+#header {}
+#content {}
+#footer {}
 
-header {
-    #grid > .c4;
-        #shadow > .text-shadow( #eee, 1px 0 20px );
-}
-
-section#hgroups {
-    #grid > .c4;
-}
-
-section#buttons {
-    #grid > .c6;
-    width:100%;
-    .round {
-        padding:5px;
-        background-color:green;
-        #border > .border-radius(20px);
-        #shadow > .box-shadow( 2px, 2px, 4px, #eee);
-    }
-    .btn {
-        .btn_bar( #dd231d, white, 9px 10px 0 10px, 6px );
-    }
-    .callto {
-        .coolbtn(#ddd, 15px);
-    }
-}
-
-section#img {
-    #grid > .c6;
-    .img {
-        .scrollbar;
-        height: 290px;
-        .box-sizing;
-    }
-}
-
-section#listing {
-    #grid > .c6;
-    width:100%;
-    .grad {
-        #gradient > .h;
-    }
-}
-
-fieldset {
-    #grid > .c4;
-    width:100%;
-    display:block;
-}
-
-section#precon {
-    #grid > .c6;
-}
-
-footer {}
+/* ================== //
+// =common element  = //
+// ================== */
+header {  }
+section { }
+footer {  }
 
 /* ================== //
 // =  media screen  = //
 // ================== */
 
+/* --- 1280 laptop/desktop -- */ @media only screen and (min-width: 1224px) { }
+/* --- 1024 netbook --------- */ @media only screen and (min-width: 992px) and (max-device-width:1024px) { }
+/* --- 480px mobile --------- */ @media only screen and (min-width: 480px) and (max-width: 800px) { }
+/* --- iPads (landscape) ---- */ @media only screen and (orientation : landscape) and (min-device-width : 768px) and (max-device-width : 1024px) { } 
+/* --- iPads (portrait) ----- */ @media only screen and (orientation : portrait) and (min-device-width : 768px) and (max-device-width : 1024px) { } 
