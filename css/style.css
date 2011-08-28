@@ -579,6 +579,12 @@ dl.table dd {
   padding-top: 10px;
   float: left;
 }
+table.stripe tr:nth-child(odd) td {
+  background-color: #f9f9f9;
+}
+table.stripe tr:hover td {
+  background-color: #f5f5f5;
+}
 /* nav */
 .hnav .clear li {
   float: left;
