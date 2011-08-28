@@ -260,6 +260,7 @@ hgroup.coudal h2 {
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: bold;
+  margin: 0;
 }
 hgroup.timoni h1 {
   font-size: 12px;
@@ -308,6 +309,7 @@ hgroup.noob h1 {
   font-weight: 100;
   float: right;
   clear: both;
+  margin: 0;
 }
 hgroup.noob h2 {
   font: bold 34px "Century Schoolbook", Georgia, Times, serif;
