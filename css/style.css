@@ -200,7 +200,10 @@ h5, .strong, strong {
   font-size: 1.5em;
   line-height: 0.2142857142857143em;
 }
-h6, .small, small {
+h6,
+.small,
+small,
+p {
   font-size: 1em;
   line-height: 1.2857142857142858em;
 }
@@ -209,7 +212,6 @@ h6, .small, small {
   padding: 0.28571428571428575em 0;
 }
 p {
-  font-size: 1em;
   word-wrap: break-word;
 }
 i, em {
@@ -539,6 +541,13 @@ textarea {
   line-height: 1.25;
   text-align: left;
 }
+fieldset .inline input,
+fieldset .inline textarea,
+fieldset .inline select,
+fieldset .inline button {
+  display: inline;
+  float: left;
+}
 /* Table
 ---------------------------------------- */
 table {
@@ -666,8 +675,6 @@ table.stripe tr:hover td {
   background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#781bb9), to(#963ad6));
   background: -moz-linear-gradient(19% 75% 90deg, #963ad6, #781bb9);
 }
-/* 
- */
 /* nav */
 .hnav .clear li {
   float: left;
@@ -729,6 +736,10 @@ img::-moz-selection {
 }
 body {
   -webkit-tap-highlight-color: #ffff9e;
+}
+/* background color */
+.backgrey {
+  background-color: grey;
 }
 /*
  * #border      > .border-radius    ( radius                                                                              );
@@ -886,7 +897,6 @@ fluid
   display: block;
 }
 .col {
-  display: inline;
   float: left;
   margin-right: 2.6%;
   display: block;

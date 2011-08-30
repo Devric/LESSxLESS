@@ -13,12 +13,11 @@ h2, .large          { @font:4em;   font-size:@font; line-height: @line/@font*3; 
 h3, .bigger         { @font:3em;   font-size:@font; line-height: @line/@font*2;   }
 h4, .big            { @font:2em;   font-size:@font; line-height: @line/@font*1.5; }
 h5, .strong, strong { @font:1.5em; font-size:@font; line-height: @line/@font/4;   }
-h6, .small, small   { @font:1em;   font-size:@font; line-height: @line/@font;     }
+h6, .small, small,p { @font:1em;   font-size:@font; line-height: @line/@font;     }
 .tiny               { @font:0.9em; font-size:@font; padding:@line/(@font*5) 0;    }
 
-p {@font:1em; font-size:@font; word-wrap:break-word; }
+p {word-wrap:break-word;}
 i, em {font-style: italic;}
-
 a { text-decoration:none; }
 
 /* Block Baselines */
@@ -185,7 +184,5 @@ blockquote.quote {
             &:hover { color: darken( @blue, 20% ); }
         }
 }
-
-
 
 pre { border:1px dashed #E1E1E1; color:#333344; background:#FAFAFA; font-family:monospace; overflow:auto; font-size:11px; padding:1em; }
