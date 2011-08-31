@@ -14,24 +14,22 @@ button[type=button], button[type=reset], button[type=submit] {
 textarea { line-height: 1.25; text-align: left; }
 
 fieldset .inline {
-    input, textarea, select, button {
-        display:inline; float:left;
-    }
+    label, input, textarea, select, button { display:inline; float:left; }
+    input[type=checkbox], input[type=radio] { float:none; }
+    label { margin-top:4px; }
 }
 /* ie8 hackes*/
 fieldset, #IE8#HACK { padding-top:1.4em; } 
 legend, #IE8#HACK { margin-top:0; margin-bottom:0; }
 
 
-.error,
-.notice,
-.success,
-.info    { padding: 0.8em; margin-bottom: 1em; border: 2px solid #ddd; }
+.alert   { padding: 0.5em; margin-bottom: 1em; border: 2px solid #ddd; #border > .border-radius(4px); #shadow > .text-shadow(0 1px 0 @grey); }
+.alert .action { display:block; margin:5px auto 0; text-align:right; }
 
-.error   { background: #fbe3e4; color: #8a1f11; border-color: #fbc2c4; } .error a   { color: #8a1f11; }
-.notice  { background: #fff6bf; color: #514721; border-color: #ffd324; } .notice a  { color: #514721; }
-.success { background: #e6efc2; color: #264409; border-color: #c6d880; } .success a { color: #264409; }
-.info    { background: #d5edf8; color: #205791; border-color: #92cae4; } .info a    { color: #205791; }
+.alert.error   { background: #fbe3e4; color: #8a1f11; border-color: #fbc2c4; } .alert.error a   { color: #8a1f11; }
+.alert.notice  { background: #fff6bf; color: #514721; border-color: #ffd324; } .alert.notice a  { color: #514721; }
+.alert.success { background: #e6efc2; color: #264409; border-color: #c6d880; } .alert.success a { color: #264409; }
+.alert.info    { background: #d5edf8; color: #205791; border-color: #92cae4; } .alert.info a    { color: #205791; }
 
 /* Table
 ---------------------------------------- */
