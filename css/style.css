@@ -712,13 +712,16 @@ table.stripe tr:hover td {
 .justify {
   text-align: justify;
 }
-.tleft {
+.textl {
   text-align: left;
 }
-.tright {
+.textr {
   text-align: right;
 }
-.tcenter {
+.textc {
+  text-align: center;
+}
+.textinnerc div, .textinnerc p, .textinnerc span {
   text-align: center;
 }
 /* selections */
@@ -740,6 +743,9 @@ body {
 /* background color */
 .backgrey {
   background-color: #eee;
+}
+.backblue {
+  background-color: #77d7f9;
 }
 /*
  * #border      > .border-radius    ( radius                                                                              );
