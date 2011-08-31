@@ -13,14 +13,13 @@ fluid
 //grids variable doubled in style.less
 //@grids: 12; //# of grids, up to 16
 //@gut: 2.8%; //gutter width
-//@pad:0; //side paddings
 
 .row, .row .row { position:relative; width:100%; margin:5px auto; clear:both; display:block; }
 .col {  float:left; margin-right: @gut; display:block;}
 .last { margin-right:0; float:right; clear:right; }
 
 //calc
-@content : 100 - ( 2 * @pad ) + @gut; 
+@content : 100 + @gut; 
 @col: @content / @grids - @gut;
 @fullcol : @col + @gut;
 
