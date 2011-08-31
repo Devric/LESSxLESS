@@ -20,7 +20,7 @@ fluid
 .last { margin-right:0; float:right; clear:right; }
 
 //calc
-@content : 100 - ( 2 * @pad ); 
+@content : 100 - ( 2 * @pad ) + @gut; 
 @col: @content / @grids - @gut;
 @fullcol : @col + @gut;
 
