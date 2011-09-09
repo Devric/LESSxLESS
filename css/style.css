@@ -509,9 +509,6 @@ ol li ol li:before {
 }
 /* Form
 ---------------------------------------- */
-fieldset {
-  padding: 1em;
-}
 legend {
   font-weight: bold;
   padding: 0 .25em;
@@ -727,24 +724,51 @@ form div.error {
 /* Table
 ---------------------------------------- */
 table {
-  border: 0;
-  border-collapse: collapse;
-  border-spacing: 0;
-  line-height: 1.3;
+  margin: 5% auto 0;
+  color: #555555;
+  /* stripe */
+
+}
+table tr:nth-child(odd) td {
+  background-color: #f6f6f6;
+}
+table tr:hover td {
+  background-color: #f9f9f9;
 }
 caption, th, td {
   text-align: left;
   vertical-align: top;
 }
-th, td {
-  border: 1px solid;
-  padding: .5em 1em;
-}
 caption {
   padding-bottom: 1em;
+  text-align: center;
+}
+th, td {
+  padding: 10px 28px;
+  text-align: center;
 }
 th {
+  padding-top: 20px;
+  text-shadow: 1px 1px 1px #fff;
+  background: #e8eaeb;
   font-weight: bold;
+}
+th:first-child, td:first-child {
+  text-align: left;
+}
+tr {
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+}
+table.grid {
+  border: 1px solid #e0e0e0;
+}
+table.grid td {
+  border-top: 1px solid #e0e0e0;
+  border-right: 1px solid #e0e0e0;
+}
+table.grid th:last-child, table.grid td:last-child {
+  border-right: 0;
 }
 dl {
   padding: 10px;
@@ -771,85 +795,64 @@ dl.table dd {
   padding-top: 10px;
   float: left;
 }
-table.stripe tr:nth-child(odd) td {
-  background-color: #f9f9f9;
-}
-table.stripe tr:hover td {
-  background-color: #f5f5f5;
-}
 /* ========================= //
-// =   css3 form           = //
+// =   sexy form           = //
 // ========================= */
-.sexyform form {
-  border: 1px solid #270644;
-  width: 250px;
-  margin: 50px auto;
-  padding: 20px;
-  -webkit-background-clip: padding-box;
-  -webkit-border-radius: 20px;
-  -moz-background-clip: padding-box;
-  -moz-border-radius: 20px;
-  border-radius: 20px;
-  background-clip: padding-box;
-  -webkit-box-shadow: 0 -5px 60px #270644;
-  -moz-box-shadow: 0 -5px 60px #270644;
-  box-shadow: 0 -5px 60px #270644;
-  background: -moz-linear-gradient(19% 75% 90deg, #4e0085, #963ad6);
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#963ad6), to(#4e0085));
+.pagination a {
+  padding: 5px;
+  float: left;
 }
-.sexyform label {
-  font-size: 12px;
-  font-family: arial, sans-serif;
-  list-style-type: none;
-  color: #fff;
-  text-shadow: #000 1px 1px;
-  margin-bottom: 10px;
-  font-weight: bold;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  display: block;
+.pagination a:hover, .pagination a.selected {
+  color: #08b5fb;
 }
-.sexyform input {
-  -webkit-transition-property: -webkit-box-shadow, background;
-  -webkit-transition-duration: 0.25s;
-  padding: 6px;
-  border-bottom: 0px;
-  border-left: 0px;
-  border-right: 0px;
-  border-top: 1px solid #ad64e0;
-  -moz-box-shadow: 0px 0px 2px #000;
-  -webkit-box-shadow: 0px 0px 2px #000;
-  margin-bottom: 10px;
-  background: #8a33c6;
-  width: 230px;
+.pagination .back, .pagination .next {
+  padding: 5px 15px;
 }
-.sexyform input:hover {
-  -webkit-box-shadow: 0px 0px 4px #000;
-  background: #9d39e1;
+.pagination.clean {
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  display: inline-block;
 }
-.sexyform input.submit {
-  -webkit-transition-property: -webkit-box-shadow, background;
-  -webkit-transition-duration: 0.25s;
-  width: 100px;
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#963ad6), to(#781bb9));
-  background: -moz-linear-gradient(19% 75% 90deg, #781bb9, #963ad6);
-  color: #fff;
-  text-transform: uppercase;
-  text-shadow: #000 1px 1px;
-  border-top: 1px solid #ad64e0;
-  margin-top: 10px;
+.pagination.clean a {
+  padding: 5px 10px;
+  border-top: 1px solid #e6e6e6;
+  border-right: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+  color: #459be2;
 }
-.sexyform input.submit:hover {
-  -webkit-box-shadow: 0px 0px 2px #000;
-  -webkit-box-shadow: 0 0 2 p #000000;
-  -moz-box-shadow: 0 0 2 p #000000;
-  box-shadow: 0 0 2 p #000000;
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#963ad6), to(#781bb9));
-  background: -moz-linear-gradient(19% 75% 90deg, #781bb9, #963ad6);
+.pagination.clean a.selected, .pagination.clean a:hover {
+  background: #bcf0fb;
 }
-.sexyform input.submit:active {
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#781bb9), to(#963ad6));
-  background: -moz-linear-gradient(19% 75% 90deg, #963ad6, #781bb9);
+.pagination.clean .back, .pagination.clean .next {
+  padding: 5px 15px;
+}
+.pagination.clean .next {
+  -webkit-border-top-left-radius: 0;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -webkit-border-bottom-left-radius: 0;
+  -moz-border-radius-topleft: 0;
+  -moz-border-radius-topright: 3px;
+  -moz-border-radius-bottomright: 3px;
+  -moz-border-radius-bottomleft: 0;
+  border-top-left-radius: 0;
+}
+.pagination.clean .back {
+  border-left: 1px solid #e6e6e6;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-top-right-radius: 0;
+  -webkit-border-bottom-right-radius: 0;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-topright: 0;
+  -moz-border-radius-bottomright: 0;
+  -moz-border-radius-bottomleft: 3px;
+  border-top-left-radius: 3px;
+  color: #e2e2e2;
+}
+.pagination.clean .back:hover, .pagination.clean .back.selected {
+  color: #459be2;
 }
 /* nav */
 .hnav .clear li {
@@ -925,6 +928,90 @@ body {
 }
 .overhide {
   overflow: hidden;
+}
+.bgrey {
+  background-color: #555555;
+}
+.bgrey1 {
+  background-color: #888888;
+}
+.bgrey2 {
+  background-color: #222222;
+}
+.bblue {
+  background-color: #08b5fb;
+}
+.bblue1 {
+  background-color: #6cd3fd;
+}
+.bblue2 {
+  background-color: #036f9a;
+}
+.bgreen {
+  background-color: #46a546;
+}
+.bgreen1 {
+  background-color: #86cb86;
+}
+.bgreen2 {
+  background-color: #285d28;
+}
+.bred {
+  background-color: #9d261d;
+}
+.bred1 {
+  background-color: #dc4e44;
+}
+.bred2 {
+  background-color: #47110d;
+}
+.byellow {
+  background-color: #ffc40d;
+}
+.byellow1 {
+  background-color: #ffdd73;
+}
+.byellow2 {
+  background-color: #a67e00;
+}
+.borange {
+  background-color: #f89406;
+}
+.borange1 {
+  background-color: #fbbf69;
+}
+.borange2 {
+  background-color: #945904;
+}
+.bpink {
+  background-color: #c3325f;
+}
+.bpink1 {
+  background-color: #de7d9b;
+}
+.bpink2 {
+  background-color: #721d37;
+}
+.bpurple {
+  background-color: #7a43b6;
+}
+.bpurple1 {
+  background-color: #ae8bd4;
+}
+.bpurple2 {
+  background-color: #48286b;
+}
+.white {
+  color: #ffffff;
+}
+.green {
+  color: #46a546;
+}
+.blue {
+  color: #08b5fb;
+}
+.white {
+  color: #ffffff;
 }
 /*
  * #border      > .border-radius    ( radius                                                                              );
