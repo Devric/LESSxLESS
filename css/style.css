@@ -798,6 +798,7 @@ dl.table dd {
 /* ========================= //
 // =   sexy form           = //
 // ========================= */
+/* ------------ pagination ------------ */
 .pagination a {
   padding: 5px;
   float: left;
@@ -853,6 +854,19 @@ dl.table dd {
 }
 .pagination.clean .back:hover, .pagination.clean .back.selected {
   color: #459be2;
+}
+/* ------------ top/bot bar ------------ */
+.topbar, .botbar {
+  width: 100%;
+  position: fixed;
+}
+.topbar {
+  top: 0;
+  left: 0;
+}
+.botbar {
+  bottom: 0;
+  left: 0;
 }
 /* nav */
 .hnav .clear li {
