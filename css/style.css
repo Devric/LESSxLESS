@@ -89,6 +89,9 @@ video {
   background: transparent;
   border: 0;
   text-decoration: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 /* HTML5 display-role reset for older browsers */
 article,
@@ -569,7 +572,7 @@ textarea {
   border: 1px solid #ccc;
   background: #f5f5f5;
   text-shadow: 0 1px 0 white 0px 0px 20px;
-  height: 18px;
+  height: 28px;
 }
 .input-prepend .add-on input[type=checkbox],
 .input-append .add-on input[type=checkbox],
@@ -857,16 +860,170 @@ dl.table dd {
 }
 /* ------------ top/bot bar ------------ */
 .topbar, .botbar {
-  width: 100%;
+  margin: 0 auto;
   position: fixed;
+  height: 30px;
+  display: block;
+  z-index: 1999999999;
+  -webkit-box-shadow: 0 0 10px #eeeeee;
+  -moz-box-shadow: 0 0 10px #eeeeee;
+  box-shadow: 0 0 10px #eeeeee;
+}
+.topbar h1,
+.botbar h1,
+.topbar h2,
+.botbar h2,
+.topbar h3,
+.botbar h3,
+.topbar h4,
+.botbar h4,
+.topbar h5,
+.botbar h5,
+.topbar h6,
+.botbar h6 {
+  font-weight: bold;
+  padding: 12px;
+}
+.topbar form,
+.botbar form,
+.topbar span,
+.botbar span,
+.topbar h1,
+.botbar h1,
+.topbar h2,
+.botbar h2,
+.topbar h3,
+.botbar h3,
+.topbar h4,
+.botbar h4,
+.topbar h5,
+.botbar h5,
+.topbar h6,
+.botbar h6 {
+  float: left;
+  height: 100%;
+  margin: 0 auto;
+  min-width: 100px;
+  text-align: center;
+}
+.topbar a, .botbar a {
+  float: left;
+  width: auto;
+  height: 100%;
+  padding: 5px;
+  margin: 0 auto;
+  text-align: center;
+}
+.topbar a h1,
+.botbar a h1,
+.topbar a h2,
+.botbar a h2,
+.topbar a h3,
+.botbar a h3,
+.topbar a h4,
+.botbar a h4,
+.topbar a h5,
+.botbar a h5,
+.topbar a h6,
+.botbar a h6 {
+  padding: 7px;
+}
+.topbar form, .botbar form {
+  padding: 0 10px;
+}
+.topbar form input, .botbar form input {
+  min-width: 170px;
+}
+.topbar span, .botbar span {
+  position: relative;
+}
+.topbar span a, .botbar span a {
+  width: auto;
+  margin: 0 auto;
+  width: 100%;
+}
+.topbar span:hover ul, .botbar span:hover ul {
+  display: block;
+}
+.topbar ul, .botbar ul {
+  display: none;
+  margin: 0 auto;
+  text-align: center;
+}
+.topbar ul li a, .botbar ul li a {
+  text-align: left;
+  padding: 5px 0 5px 10px;
 }
 .topbar {
   top: 0;
-  left: 0;
+}
+.topbar ul {
+  top: 30px;
+  min-width: 100%;
+  background: black;
+  position: absolute;
 }
 .botbar {
   bottom: 0;
-  left: 0;
+}
+.botbar ul {
+  bottom: 30px;
+  min-width: 100%;
+  background: white;
+  position: absolute;
+}
+.topbar.dark, .botbar.dark {
+  background: #000000;
+  color: #888888;
+}
+.topbar.dark h1,
+.botbar.dark h1,
+.topbar.dark h2,
+.botbar.dark h2,
+.topbar.dark h3,
+.botbar.dark h3,
+.topbar.dark h4,
+.botbar.dark h4,
+.topbar.dark h5,
+.botbar.dark h5,
+.topbar.dark h6,
+.botbar.dark h6 {
+  color: white;
+}
+.topbar.dark a:hover,
+.botbar.dark a:hover,
+.topbar.dark a.selected,
+.botbar.dark a.selected {
+  background: #555555;
+  color: white;
+}
+.topbar.dark form input, .botbar.dark form input {
+  background: #444;
+  border: 1px solid #000000;
+}
+.topbar.light, .botbar.light {
+  background: #ffffff;
+  color: #555555;
+}
+.topbar.light h1,
+.botbar.light h1,
+.topbar.light h2,
+.botbar.light h2,
+.topbar.light h3,
+.botbar.light h3,
+.topbar.light h4,
+.botbar.light h4,
+.topbar.light h5,
+.botbar.light h5,
+.topbar.light h6,
+.botbar.light h6 {
+  color: black;
+}
+.topbar.light a:hover,
+.botbar.light a:hover,
+.topbar.light a.selected,
+.botbar.light a.selected {
+  background: #eee;
 }
 /* nav */
 .hnav .clear li {
@@ -916,6 +1073,15 @@ dl.table dd {
 }
 .textinnerc div, .textinnerc p, .textinnerc span {
   text-align: center;
+}
+.posr {
+  position: relative;
+}
+.posa {
+  position: absolute;
+}
+.posf {
+  position: fixed;
 }
 /* selections */
 ::selection {

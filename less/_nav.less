@@ -38,11 +38,76 @@
 
 /* ------------ top/bot bar ------------ */
 .topbar, .botbar {
-    width:100%;
+    margin:0 auto;
     position:fixed;
+    height:30px;
+    display:block;
+    z-index:1999999999;
+    #shadow > .box-shadow(0, 0, 10px, #eee);
+        h1,h2,h3,h4,h5,h6 { font-weight:bold; padding:12px; }
+        form, span, h1,h2,h3,h4,h5,h6 {
+            float:left;
+            height:100%;
+            margin:0 auto;
+            min-width:100px;
+            text-align:center;
+        }
+        a {
+            float:left;
+            width:auto;
+            height:100%;
+            padding:5px;
+            margin:0 auto;
+            text-align:center;
+            h1,h2,h3,h4,h5,h6 { padding:7px; }
+        }
+        form { padding:0 10px; input{ min-width:170px } }
+        span{ position:relative; a{width:auto; margin:0 auto; width:100%;} &:hover ul{ display:block;}}
+        ul {
+            display:none;
+            margin:0 auto;
+            text-align:center;
+            li a { text-align:left;
+                padding:5px 0 5px 10px;
+            }
+        }
+}
+.topbar {
+    top:0;
+    ul {
+        top:30px;
+        min-width:100%;
+        background:black;
+        position:absolute;
+    }
+}
+.botbar {
+    bottom:0;
+    ul {
+        bottom:30px;
+        min-width:100%;
+        background:white;
+        position:absolute;
+    }
 }
 
-.topbar { top:0; left:0; }
-.botbar { bottom:0; left:0; }
+// styling
+.topbar.dark, .botbar.dark {
+    background:@black;
+    color:lighten(@grey, 20%);
+    h1,h2,h3,h4,h5,h6 { color:white; }
+    a:hover, a.selected {
+        background:@grey;
+        color:white;
+    }
+    form input { background:#444; border:1px solid @black; }
+}
 
-.menu {  }
+.topbar.light, .botbar.light {
+    background:@white;
+    color:@grey;
+    h1,h2,h3,h4,h5,h6 { color:black; }
+    a:hover, a.selected {
+        background:#eee;
+    }
+}
