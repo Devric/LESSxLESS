@@ -1024,6 +1024,9 @@ dl.table dd {
   background: #444;
   border: 1px solid #000000;
 }
+.topbar.dark input:focus, .botbar.dark input:focus {
+  background: #ffffff;
+}
 .topbar.light, .botbar.light {
   background: #ffffff;
   color: #555555;
