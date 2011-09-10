@@ -991,6 +991,9 @@ dl.table dd {
   -moz-border-radius-bottomright: 0;
   -moz-border-radius-bottomleft: 0;
   border-top-left-radius: 5px;
+  -webkit-box-shadow: 0 0 10px #eeeeee;
+  -moz-box-shadow: 0 0 10px #eeeeee;
+  box-shadow: 0 0 10px #eeeeee;
 }
 .topbar.dark, .botbar.dark {
   background: #000000;
