@@ -181,27 +181,47 @@ strong {
 }
 .gigantic {
   font-size: 20em;
-  line-height: 0.9000000000000001em;
+  line-height: 0.9642857142857144em;
 }
 h1, .huge {
   font-size: 5em;
   line-height: 1.0285714285714287em;
 }
+h1 small, .huge small {
+  font-size: 0.5em;
+  margin-left: 5px;
+}
 h2, .large {
   font-size: 4em;
   line-height: 0.9642857142857144em;
+}
+h2 small, .large small {
+  font-size: 0.5em;
+  margin-left: 5px;
 }
 h3, .bigger {
   font-size: 3em;
   line-height: 0.8571428571428572em;
 }
+h3 small, .bigger small {
+  font-size: 0.6em;
+  margin-left: 5px;
+}
 h4, .big {
   font-size: 2em;
   line-height: 0.9642857142857144em;
 }
+h4 small, .big small {
+  font-size: 0.6em;
+  margin-left: 5px;
+}
 h5, .strong, strong {
   font-size: 1.2em;
   line-height: 0.2678571428571429em;
+}
+h5 small, .strong small, strong small {
+  font-size: 0.6em;
+  margin-left: 5px;
 }
 h6,
 .small,
@@ -210,9 +230,20 @@ p {
   font-size: 1em;
   line-height: 1.2857142857142858em;
 }
+h6 small,
+.small small,
+small small,
+p small {
+  font-size: 0.6em;
+  margin-left: 5px;
+}
 .tiny {
   font-size: 0.9em;
   padding: 0.28571428571428575em 0;
+}
+.tiny small {
+  font-size: 0.6em;
+  margin-left: 5px;
 }
 p {
   word-wrap: break-word;

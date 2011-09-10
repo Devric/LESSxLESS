@@ -7,14 +7,14 @@
 body { line-height: @line; font-size:   @bodyfont; font-family: @fontfamily; }
 h1,h2,h3,h4,h5,h6,strong { font-weight: bold; }
 
-.gigantic           { @font:20em;  font-size:@font; line-height: @line/@font*14;  }
-h1, .huge           { @font:5em;   font-size:@font; line-height: @line/@font*4;   }
-h2, .large          { @font:4em;   font-size:@font; line-height: @line/@font*3;   }
-h3, .bigger         { @font:3em;   font-size:@font; line-height: @line/@font*2;   }
-h4, .big            { @font:2em;   font-size:@font; line-height: @line/@font*1.5; }
-h5, .strong, strong { @font:1.2em; font-size:@font; line-height: @line/@font/4;   }
-h6, .small, small,p { @font:1em;   font-size:@font; line-height: @line/@font;     }
-.tiny               { @font:0.9em; font-size:@font; padding:@line/(@font*5) 0;    }
+.gigantic           { @font:20em;  font-size:@font; line-height: @line/@font*15;  }
+h1, .huge           { @font:5em;   font-size:@font; line-height: @line/@font*4;   small { font-size:0.5em; margin-left:5px}}
+h2, .large          { @font:4em;   font-size:@font; line-height: @line/@font*3;   small { font-size:0.5em; margin-left:5px}}
+h3, .bigger         { @font:3em;   font-size:@font; line-height: @line/@font*2;   small { font-size:0.6em; margin-left:5px}}
+h4, .big            { @font:2em;   font-size:@font; line-height: @line/@font*1.5; small { font-size:0.6em; margin-left:5px}}
+h5, .strong, strong { @font:1.2em; font-size:@font; line-height: @line/@font/4;   small { font-size:0.6em; margin-left:5px}}
+h6, .small, small,p { @font:1em;   font-size:@font; line-height: @line/@font;     small { font-size:0.6em; margin-left:5px}}
+.tiny               { @font:0.9em; font-size:@font; padding:@line/(@font*5) 0;    small { font-size:0.6em; margin-left:5px}}
 
 p {word-wrap:break-word;}
 i, em {font-style: italic;}
