@@ -1,27 +1,70 @@
 <h3>forms</h3>
 <hr />
-<section id="forms">
+<legend>legend</legend>
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus.</p>
+<h4>Form Element</h4>
+<div class="col g3">
     <fieldset>
-        <legend>legend</legend>
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus.</p>
-        <h4>Form Element</h4>
-        <div class="col g3">
-            <label for="text_field">Text Field:</label>
-            <input type="text" id="text_field" />
+        <label for="text_field">Text Field:</label>
+        <input type="text" id="text_field" />
 
-            <label for="text_area">Text Area:</label>
-            <textarea id="text_area"></textarea>
+        <label for="text_area">Text Area:</label>
+        <textarea id="text_area"></textarea>
 
-            <label for="password">Password:</label>
-            <input type="password" class="password" name="password" />
+        <label for="password">Password:</label>
+        <input type="password" class="password" name="password" />
 
-            <label for="file">File Input:</label>
-            <input type="file" class="file" name="file" />
+        <label for="file">File Input:</label>
+        <input type="file" class="file" name="file" />
 
-            <p><input class="button" type="reset" value="Clear" /> <input class="button" type="submit" value="Submit" /></p>
-        </div>
-        <div class="col g3">
-            <form>
+        <p><input class="button" type="reset" value="Clear" /> <input class="button" type="submit" value="Submit" /></p>
+    </fieldset>
+</div>
+<div class="col g3">
+    <form>
+        <select name="select_element">
+            <optgroup label="Option Group 1">
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+            </optgroup>
+            <optgroup label="Option Group 2">
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+            </optgroup>
+        </select>
+
+        <p><label for="radio_buttons">Radio Buttons:</label>
+        <input type="radio" class="radio" name="radio_button" value="radio_1" /> Radio 1<br/>
+        <input type="radio" class="radio" name="radio_button" value="radio_2" /> Radio 2<br/>
+        <input type="radio" class="radio" name="radio_button" value="radio_3" /> Radio 3<br/>
+        </p>
+
+        <p><label for="checkboxes">Checkboxes:</label>
+        <input type="checkbox" class="checkbox" name="checkboxes" value="check_1" /> Radio 1<br/>
+        <input type="checkbox" class="checkbox" name="checkboxes" value="check_2" /> Radio 2<br/>
+        <input type="checkbox" class="checkbox" name="checkboxes" value="check_3" /> Radio 3<br/>
+        </p>
+    </form>
+</div>
+<aside class="col g6 last">
+    <div class="alert error"><strong>.alert.error</strong> hm something went wrong here always proof read it</div>
+    <div class="alert success"><strong>.alert.success</strong> waoow you have done it again</div>
+    <div class="alert notice"><strong>.alert.notice</strong> New anoucement just arrived</div>
+    <div class="alert info"><strong>.alert.info</strong> ya thats right </div>
+    <div class="alert error"><strong>.alert.error + .action</strong> It seems you are not a premium member, would you like to try out our 30Days free trial! its easy, just connect with your google account are you are In
+        <div class="action"><input type="button" name="submit" value="Ok"/> <input type="button" name="cancel" value="Cancel"/></div>
+    </div>
+</aside>
+<div class="row alert info">
+    <div class="col g12 last clearfix">
+        <h5>This uses fieldset.inline</h5>
+        <form action="">
+            <fieldset class="inline">
+                <label for="text_field">Text Field:</label>
+                <input type="text" id="text_field" />
+
                 <select name="select_element">
                     <optgroup label="Option Group 1">
                         <option value="1">Option 1</option>
@@ -35,98 +78,53 @@
                     </optgroup>
                 </select>
 
-                <p><label for="radio_buttons">Radio Buttons:</label>
-                <input type="radio" class="radio" name="radio_button" value="radio_1" /> Radio 1<br/>
-                <input type="radio" class="radio" name="radio_button" value="radio_2" /> Radio 2<br/>
-                <input type="radio" class="radio" name="radio_button" value="radio_3" /> Radio 3<br/>
-                </p>
+                <span><input type="checkbox" class="checkbox" name="checkboxes" value="check_1" /> Radio 1</span>
+                <span><input type="checkbox" class="checkbox" name="checkboxes" value="check_3" /> Radio 3</span>
 
-                <p><label for="checkboxes">Checkboxes:</labelr
-                    <input type="checkbox" class="checkbox" name="checkboxes" value="check_1" /> Radio 1<br/>
-                    <input type="checkbox" class="checkbox" name="checkboxes" value="check_2" /> Radio 2<br/>
-                    <input type="checkbox" class="checkbox" name="checkboxes" value="check_3" /> Radio 3<br/>
-                    </p>
-                </form>
+                <span><input type="radio" class="radio" name="radio_button" value="radio_1" /> Radio 1</span>
+                <span><input type="radio" class="radio" name="radio_button" value="radio_2" /> Radio 2</span>
+            </fieldset>
+        </div>
+    </form>
+    <form action="">
+        <div class="col g6">
+            <div class="input-prepend">
+                <div class="add-on">@</div>
+                <input type="text" />
             </div>
-            <aside class="col g6 last">
-                <div class="alert error"><strong>.alert.error</strong> hm something went wrong here always proof read it</div>
-                <div class="alert success"><strong>.alert.success</strong> waoow you have done it again</div>
-                <div class="alert notice"><strong>.alert.notice</strong> New anoucement just arrived</div>
-                <div class="alert info"><strong>.alert.info</strong> ya thats right </div>
-                <div class="alert error"><strong>.alert.error + .action</strong> It seems you are not a premium member, would you like to try out our 30Days free trial! its easy, just connect with your google account are you are In
-                    <div class="action"><input type="button" name="submit" value="Ok"/> <input type="button" name="cancel" value="Cancel"/></div>
-                </div>
-            </aside>
-            <div class="row alert info">
-                <div class="col g12 last clearfix">
-                    <h5>This uses fieldset.inline</h5>
-                    <form action="">
-                        <fieldset class="inline">
-                            <label for="text_field">Text Field:</label>
-                            <input type="text" id="text_field" />
-
-                            <select name="select_element">
-                                <optgroup label="Option Group 1">
-                                    <option value="1">Option 1</option>
-                                    <option value="2">Option 2</option>
-                                    <option value="3">Option 3</option>
-                                </optgroup>
-                                <optgroup label="Option Group 2">
-                                    <option value="1">Option 1</option>
-                                    <option value="2">Option 2</option>
-                                    <option value="3">Option 3</option>
-                                </optgroup>
-                            </select>
-
-                            <span><input type="checkbox" class="checkbox" name="checkboxes" value="check_1" /> Radio 1</span>
-                            <span><input type="checkbox" class="checkbox" name="checkboxes" value="check_3" /> Radio 3</span>
-
-                            <span><input type="radio" class="radio" name="radio_button" value="radio_1" /> Radio 1</span>
-                            <span><input type="radio" class="radio" name="radio_button" value="radio_2" /> Radio 2</span>
-                        </fieldset>
-                    </div>
-                </form>
-                <form action="">
-                    <div class="col g6">
-                        <div class="input-prepend">
-                            <div class="add-on">@</div>
-                            <input type="text" />
-                        </div>
-                        <div class="input-prepend">
-                            <div class="add-on"><input type="CHECKBOX" name="name" value="value"/></div>
-                            <input type="text" />
-                        </div>
-                        <div class="clear"></div>
-                        <div class="input-prepend">
-                            <div class="add-on">from</div>
-                            <input type="text" />
-                        </div>
-                        <div class="input-prepend">
-                            <div class="add-on">to</div>
-                            <input type="text" />
-                        </div>
-                    </div>
-                    <div class="col g6 last">
-                        <div class="input-append">
-                            <div class="add-on">@</div>
-                            <input type="text" />
-                        </div>
-                        <div class="input-append">
-                            <div class="add-on"><input type="CHECKBOX" name="name" value="value"/></div>
-                            <input type="text" />
-                        </div>
-                        <div class="clear"></div>
-                        <div class="input-append">
-                            <div class="add-on">from</div>
-                            <input type="text" />
-                        </div>
-                        <div class="input-append">
-                            <div class="add-on">to</div>
-                            <input type="text" />
-                        </div>
-                    </div>
-                </form>
-                <div class="clear"></div>
+            <div class="input-prepend">
+                <div class="add-on"><input type="CHECKBOX" name="name" value="value"/></div>
+                <input type="text" />
             </div>
-        </fieldset>
-    </section>
+            <div class="clear"></div>
+            <div class="input-prepend">
+                <div class="add-on">from</div>
+                <input type="text" />
+            </div>
+            <div class="input-prepend">
+                <div class="add-on">to</div>
+                <input type="text" />
+            </div>
+        </div>
+        <div class="col g6 last">
+            <div class="input-append">
+                <div class="add-on">@</div>
+                <input type="text" />
+            </div>
+            <div class="input-append">
+                <div class="add-on"><input type="CHECKBOX" name="name" value="value"/></div>
+                <input type="text" />
+            </div>
+            <div class="clear"></div>
+            <div class="input-append">
+                <div class="add-on">from</div>
+                <input type="text" />
+            </div>
+            <div class="input-append">
+                <div class="add-on">to</div>
+                <input type="text" />
+            </div>
+        </div>
+    </form>
+    <div class="clear"></div>
+</div>
