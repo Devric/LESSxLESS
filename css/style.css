@@ -865,9 +865,9 @@ dl.table dd {
   height: 30px;
   display: block;
   z-index: 1999999999;
-  -webkit-box-shadow: 0 0 10px #eeeeee;
-  -moz-box-shadow: 0 0 10px #eeeeee;
-  box-shadow: 0 0 10px #eeeeee;
+  -webkit-box-shadow: 0 0 5px #eeeeee;
+  -moz-box-shadow: 0 0 5px #eeeeee;
+  box-shadow: 0 0 5px #eeeeee;
 }
 .topbar h1,
 .botbar h1,
