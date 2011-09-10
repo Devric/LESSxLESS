@@ -130,10 +130,72 @@ dl.table {
     dd {padding-top:10px; float:left; }
 }
 
-/* ========================= //
-// =   sexy form           = //
-// ========================= */
+/* buttons
+---------------------------------------- */
+button {
+    padding:9px 20px;
+    background:@white;
+    border:1px solid #eee;
+    #border > .border-radius;
+    #shadow > .box-shadow(1px,1px,5px,#eee);
+    #shadow > .text-shadow(1px 0px 1px, #888);
+}
 
-// ========================= //
-// =    button             = //
-// ========================= //
+/* shapes */
+button.pill { #border > .border-radius(30px); }
+button.strong { @h:35px; height:@h; min-height:@h; max-height:@h; padding:5px 10px; }
+button.small { @h:25px; height:@h; min-height:@h; max-height:@h; padding:3px 6px; }
+
+/* colours */
+button.blue,button.green,button.yellow,button.pink,button.orange,button.red,button.sky,button.lime,button.primary { color:white; }
+button.blue { @color:@blue;
+    background-color:@color;
+    border:1px solid darken(@color,5%);
+}
+
+button.green { @color:@green;
+    background-color:@color;
+    border:1px solid darken(@color,5%);
+}
+
+button.yellow { @color:@yellow;
+    background-color:@color;
+    border:1px solid darken(@color,5%);
+}
+
+button.pink { @color:@pink;
+    background-color:@color;
+    border:1px solid darken(@color,5%);
+}
+
+button.orange { @color:@orange;
+    background-color:lighten(@color,15%);
+    border:1px solid darken(@color,5%);
+}
+
+button.red { @color:@red;
+    background-color:lighten(@color,15%);
+    border:1px solid @color;
+}
+
+/* gradient */
+button.sky {
+    #gradient > .v3( #36E0F5, #30C8DA, 95,#32CFE2 );
+    border:1px solid lighten(#36E0F5,5%);
+    #shadow > .box-shadow(0px,0px,14px, #36E0F5);
+    text-shadow:none;
+}
+button.lime {
+    #gradient > .v3( #86F521, #79DC1E, 95,#7FE71F );
+    border:1px solid lighten(#86F521,5%);
+    #shadow > .box-shadow(0px,0px,14px, #86F521);
+    text-shadow:none;
+}
+
+button.primary {
+    #gradient > .v( #049cdb, #0064cd );
+    border-color:rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    &:hover {
+        color:#049cdb;
+    }
+}
