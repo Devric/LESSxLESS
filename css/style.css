@@ -226,6 +226,7 @@ h5 small, .strong small, strong small {
 h6, .small, p {
   font-size: 1em;
   line-height: 1.2857142857142858em;
+  color: #444;
 }
 h6 small, .small small, p small {
   font-size: 0.6em;
@@ -798,9 +799,6 @@ table.grid td {
 table.grid th:last-child, table.grid td:last-child {
   border-right: 0;
 }
-dl {
-  padding: 10px;
-}
 dl dt {
   margin-top: 10px;
 }
@@ -826,6 +824,7 @@ dl.table dd {
 /* buttons
 ---------------------------------------- */
 button {
+  cursor: pointer;
   padding: 9px 20px;
   background: #ffffff;
   border: 1px solid #eee;
@@ -877,25 +876,49 @@ button.blue {
   background-color: #08b5fb;
   border: 1px solid #04a5e6;
 }
+button.blue:hover {
+  background-color: #3ac4fc;
+  border: 1px solid #21bdfb;
+}
 button.green {
   background-color: #46a546;
   border: 1px solid #3e933e;
+}
+button.green:hover {
+  background-color: #62bc62;
+  border: 1px solid #50b550;
 }
 button.yellow {
   background-color: #ffc40d;
   border: 1px solid #f3b700;
 }
+button.yellow:hover {
+  background-color: #ffd040;
+  border: 1px solid #ffca27;
+}
 button.pink {
   background-color: #c3325f;
   border: 1px solid #af2d55;
 }
+button.pink:hover {
+  background-color: #d3557c;
+  border: 1px solid #ce406c;
+}
 button.orange {
-  background-color: #fbb450;
   border: 1px solid #df8505;
+  background-color: #fbb450;
+}
+button.orange:hover {
+  background-color: #faa937;
+  border: 1px solid #fa9f1e;
 }
 button.red {
-  background-color: #d83a2e;
   border: 1px solid #9d261d;
+  background-color: #d83a2e;
+}
+button.red:hover {
+  background-color: #dc4e44;
+  border: 1px solid #b32b21;
 }
 /* gradient */
 button.sky {
@@ -1281,7 +1304,7 @@ body {
   background-color: #555555;
 }
 .bgrey1 {
-  background-color: #888888;
+  background-color: #cccccc;
 }
 .bgrey2 {
   background-color: #222222;
@@ -1606,6 +1629,18 @@ fluid
 }
 .p11 {
   margin-left: 94.04999999999998%;
+}
+.p12 {
+  margin-left: 102.6%;
+}
+.p13 {
+  margin-left: 111.14999999999999%;
+}
+.p14 {
+  margin-left: 119.69999999999999%;
+}
+.p15 {
+  margin-left: 128.24999999999997%;
 }
 /* Grays *//* Accent Colors */
 html {
