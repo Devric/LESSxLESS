@@ -37,8 +37,8 @@ textarea { line-height: 1.25; text-align: left; }
     display:inline;
     border: 1px solid #ccc;
     background:#f5f5f5;
-    #shadow > .text-shadow(0 1px 0 white);
     height:28px;
+    #shadow > .text-shadow(0 1px 0 white);
     input[type=checkbox], input[type=radio]{ margin:0; }
 }
 .input-prepend{
@@ -185,24 +185,10 @@ button.red { @color:@red;
     &:hover { background-color:lighten(@color,20%); border:1px solid lighten(@color,5%); }
 }
 
-/* gradient */
-button.sky {
-    #gradient > .v3( #36E0F5, #30C8DA, 95,#32CFE2 );
-    border:1px solid lighten(#36E0F5,5%);
-    #shadow > .box-shadow(0px,0px,14px, #36E0F5);
-    text-shadow:none;
-}
-button.lime {
-    #gradient > .v3( #86F521, #79DC1E, 95,#7FE71F );
-    border:1px solid lighten(#86F521,5%);
-    #shadow > .box-shadow(0px,0px,14px, #86F521);
-    text-shadow:none;
-}
-
 button.primary {
     #gradient > .v( #049cdb, #0064cd );
     border-color:rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
     &:hover {
-        color:#049cdb;
+        color:#ccc;
     }
 }

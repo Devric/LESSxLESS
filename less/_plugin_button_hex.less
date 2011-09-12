@@ -1,0 +1,110 @@
+button.hex
+{
+    min-width:135px;
+    color: #333;
+    margin: 0.2em;
+    padding: 0 1.5em;
+    text-decoration: none;
+    display: inline-block;
+    background-color: #ccc;
+    border: 1px solid #ccc;
+    font: 1em/2em Arial, Helvetica;
+    #shadow   > .text-shadow();
+    #border   > .border-radius( .3em );
+    #gradient > .v3(#fff, #fff, 25%, #e6e6e6);
+    #shadow   > .inset-box-shadow(0,0,1px,1px,rgba(255,255,255,.8));
+}
+
+/* Buttons and inputs */
+button.hex, input.hex
+{
+    cursor: pointer;
+    overflow: visible; /* removes extra side spacing in IE */
+}
+
+
+/* The disabled styles */
+button.hex[disabled], button.hex[disabled]:hover, .hex.disabled, .hex.disabled:hover
+{
+    background: #eee;
+    color: #aaa;
+    border-color: #aaa;
+    cursor: default;
+    text-shadow: none;
+    position: static;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+
+button.hex:hover
+{
+    background-color: #ddd;
+    #gradient > .v(#fafafa, #ddd);
+    #shadow > .inset-box-shadow();
+}
+
+button.hex:before
+{
+    width: 1em;
+    min-width: 1em;
+    float: left;
+    padding: 0 .2em;
+    font-size: 1.5em;
+    text-align: center;
+    margin: 0 1em 0 -1em;
+    pointer-events: none;
+    background: #ccc;
+    background: rgba(0,0,0,.1);
+    #shadow > .box-shadow(1px, 0,0,rgba(0,0,0,.2));
+}
+
+//moz-fix
+button.hex::-moz-focus-inner { border: 0; padding: 0; } /* removes extra inner spacing in Firefox */
+input::-moz-focus-inner { padding: .4em; } /* If line-height can't be modified, then fix Firefox spacing with padding */
+
+/* Hexadecimal entities for the icons */
+.hex.add:before     { content: "\271A"; }
+.hex.edit:before    { content: "\270E"; }
+.hex.delete:before  { content: "\2718"; }
+.hex.save:before    { content: "\2714"; }
+.hex.email:before   { content: "\2709"; }
+.hex.like:before    { content: "\2764"; }
+.hex.next:before    { content: "\279C"; }
+.hex.star:before    { content: "\2605"; }
+.hex.spark:before   { content: "\2737"; }
+.hex.play:before    { content: "\25B6"; }
+.hex.kill:before    { content: "\2620"; }
+.hex.moon:before    { content: "\263D"; }
+.hex.smile:before   { content: "\263A"; }
+.hex.cut:before     { content: "\2704"; }
+.hex.flower:before  { content: "\2740"; }
+.hex.win:before     { content: "\270C"; }
+.hex.plane:before   { content: "\2708"; }
+.hex.phone:before   { content: "\2706"; }
+.hex.dice:before    { content: "\2684"; }
+.hex.anchor:before  { content: "\2693"; }
+.hex.sword:before   { content: "\2693"; }
+.hex.work:before    { content: "\2692"; }
+.hex.flag:before    { content: "\2691"; }
+.hex.gear:before    { content: "\2699"; }
+.hex.coffee:before  { content: "\2615"; }
+.hex.check:before   { content: "\2611"; }
+.hex.warn:before    { content: "\26A0"; }
+.hex.music:before   { content: "\266B"; }
+.hex.recycle:before { content: "\267B"; }
+.hex.harzard:before { content: "\2623"; }
+.hex.cloud:before { content: "\2601"; }
+.hex.rainy:before { content: "\2602"; }
+
+.hex.one:before     { content: "\2460"; }
+.hex.two:before     { content: "\2461"; }
+.hex.three:before   { content: "\2462"; }
+.hex.four:before    { content: "\2463"; }
+.hex.five:before    { content: "\2464"; }
+.hex.six:before     { content: "\2465"; }
+.hex.seven:before   { content: "\2466"; }
+.hex.eight:before   { content: "\2467"; }
+.hex.nine:before    { content: "\2468"; }
+.hex.ten:before     { content: "\2469"; }
