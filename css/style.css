@@ -1644,7 +1644,7 @@ button.lime {
   text-shadow: none;
 }
 button.hex {
-  min-width: 135px;
+  min-width: 125px;
   color: #333;
   margin: 0.2em;
   padding: 0 1.5em;
@@ -1677,7 +1677,6 @@ button.hex, input.hex {
   cursor: pointer;
   overflow: visible;
   /* removes extra side spacing in IE */
-
 }
 /* The disabled styles */
 button.hex[disabled],

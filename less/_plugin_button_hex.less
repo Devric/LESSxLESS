@@ -1,6 +1,6 @@
 button.hex
 {
-    min-width:135px;
+    min-width:125px;
     color: #333;
     margin: 0.2em;
     padding: 0 1.5em;
@@ -16,12 +16,7 @@ button.hex
 }
 
 /* Buttons and inputs */
-button.hex, input.hex
-{
-    cursor: pointer;
-    overflow: visible; /* removes extra side spacing in IE */
-}
-
+button.hex, input.hex { cursor: pointer; overflow: visible; /* removes extra side spacing in IE */ }
 
 /* The disabled styles */
 button.hex[disabled], button.hex[disabled]:hover, .hex.disabled, .hex.disabled:hover
@@ -42,7 +37,7 @@ button.hex:hover
 {
     background-color: #ddd;
     #gradient > .v(#fafafa, #ddd);
-    #shadow > .inset-box-shadow();
+    #shadow > .inset-box-shadow;
 }
 
 button.hex:before
@@ -95,8 +90,8 @@ input::-moz-focus-inner { padding: .4em; } /* If line-height can't be modified, 
 .hex.music:before   { content: "\266B"; }
 .hex.recycle:before { content: "\267B"; }
 .hex.harzard:before { content: "\2623"; }
-.hex.cloud:before { content: "\2601"; }
-.hex.rainy:before { content: "\2602"; }
+.hex.cloud:before   { content: "\2601"; }
+.hex.rainy:before   { content: "\2602"; }
 
 .hex.one:before     { content: "\2460"; }
 .hex.two:before     { content: "\2461"; }
