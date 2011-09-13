@@ -400,7 +400,7 @@ p.press {
   background: #474747;
   color: #222;
   padding: 10px;
-  text-shadow: #555555 0 2px 3px;
+  text-shadow: 0 2px 3px #555555;
 }
 p.presslight {
   color: #eee;
@@ -599,7 +599,7 @@ textarea {
   border: 1px solid #ccc;
   background: #f5f5f5;
   height: 28px;
-  text-shadow: 0 1px 0 white 0px 0px 20px;
+  text-shadow: #cccccc 0 1px 0 white;
 }
 .input-prepend .add-on input[type=checkbox],
 .input-append .add-on input[type=checkbox],
@@ -698,7 +698,7 @@ legend, #IE8#HACK {
   -moz-border-radius: 4px;
   border-radius: 4px;
   background-clip: padding-box;
-  text-shadow: 0 1px 0 #555555 0px 0px 20px;
+  text-shadow: #cccccc 0 1px 0 #555555;
 }
 .alert .action {
   display: block;
@@ -749,7 +749,7 @@ form div.error {
   -moz-border-radius: 4px;
   border-radius: 4px;
   background-clip: padding-box;
-  text-shadow: 0 1px 0 #555555 0px 0px 20px;
+  text-shadow: #cccccc 0 1px 0 #555555;
 }
 /* Table
 ---------------------------------------- */
@@ -838,7 +838,7 @@ button {
   -webkit-box-shadow: 1px 1px 5px #eeeeee;
   -moz-box-shadow: 1px 1px 5px #eeeeee;
   box-shadow: 1px 1px 5px #eeeeee;
-  text-shadow: 1px 0px 1px #888888;
+  text-shadow: #888888 1px 0px 1px;
 }
 /* shapes */
 button.pill {
@@ -1628,6 +1628,62 @@ button.lime {
   box-shadow: 0px 0px 20px #86f521;
   text-shadow: none;
 }
+button.sexy {
+  height: 50px;
+  color: white;
+  text-align: left;
+  min-width: 220px;
+  font-size: 1.5em;
+  padding-top: 12px;
+  -webkit-background-clip: padding-box;
+  -webkit-border-radius: 4px;
+  -moz-background-clip: padding-box;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 0px 2px #3c75b7;
+  -moz-box-shadow: 0 0px 2px #3c75b7;
+  box-shadow: 0 0px 2px #3c75b7;
+  text-shadow: rgba(0, 0, 0, 0.1) 0 -1px 1px;
+  -webkit-box-shadow: inset 0 0px 8px 0px rgba(255, 255, 255, 0.3);
+  -moz-box-shadow: inset 0 0px 8px 0px rgba(255, 255, 255, 0.3);
+  box-shadow: inset inner 0 0px 8px 0px rgba(255, 255, 255, 0.3);
+  background: #3c75b7;
+  background-image: -moz-linear-gradient(top, #3c75b7, #558ac7 90%, #3c75b7);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#3c75b7), color-stop(0.9%, #558ac7), to(#3c75b7));
+  background-image: -webkit-linear-gradient(top, from(#3c75b7), color-stop(0.9%, #558ac7), to(#3c75b7));
+  background-image: -o-linear-gradient(top, #3c75b7 0%, #558ac7 90%, #3c75b7 100%);
+  filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#3c75b7, endColorstr=#3c75b7)";
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#3c75b7, endColorstr=#3c75b7)";
+  background-image: linear-gradient(top, #3c75b7 0%, #558ac7 90%, #3c75b7 100%);
+}
+button.sexy:hover {
+  border: 1px solid rgba(0, 0, 0, 0.7);
+  background: #1b3553;
+  background-image: -moz-linear-gradient(top, #1b3553, #284e7a 90%, #1b3553);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#1b3553), color-stop(0.9%, #284e7a), to(#1b3553));
+  background-image: -webkit-linear-gradient(top, from(#1b3553), color-stop(0.9%, #284e7a), to(#1b3553));
+  background-image: -o-linear-gradient(top, #1b3553 0%, #284e7a 90%, #1b3553 100%);
+  filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#1b3553, endColorstr=#1b3553)";
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#1b3553, endColorstr=#1b3553)";
+  background-image: linear-gradient(top, #1b3553 0%, #284e7a 90%, #1b3553 100%);
+  -webkit-box-shadow: inset 0px 0px 1px 1px #000000;
+  -moz-box-shadow: inset 0px 0px 1px 1px #000000;
+  box-shadow: inset inner 0px 0px 1px 1px #000000;
+}
+.sexy:after {
+  float: right;
+  content: "\276F";
+  font-size: 0.8em;
+  margin: -16px -20px 0 0;
+  padding: 19px 11px 16px 10px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+}
+.sexy:hover:after {
+  background-color: rgba(0, 0, 0, 0.4);
+}
 /* colors */
 .hex.blue {
   color: #ffffff;
@@ -1873,13 +1929,18 @@ input::-moz-focus-inner {
  * hex color mixing
  * -------------------*/
 .hex.pill {
+  padding: 0 27px;
+  border-color: #888;
   -webkit-background-clip: padding-box;
   -webkit-border-radius: 30px;
   -moz-background-clip: padding-box;
   -moz-border-radius: 30px;
   border-radius: 30px;
   background-clip: padding-box;
-  border-color: #888;
+}
+.hex.pill:before {
+  margin-left: -30px;
+  padding: 0 8px 0 20px;
 }
 /* Hexadecimal entities for the icons */
 .hex.add:before {

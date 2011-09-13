@@ -84,8 +84,13 @@ input::-moz-focus-inner { padding: .4em; } /* If line-height can't be modified, 
 }
 
 .hex.pill {
-    #border > .border-radius( 30px );
+    padding:0 27px;
     border-color:#888;
+    #border > .border-radius( 30px );
+    &:before {
+        margin-left:-30px;
+        padding:0 8px 0 20px;
+    }
 }
 
 
