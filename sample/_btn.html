@@ -21,8 +21,19 @@
 <h5>plugins</h5>
 <hr />
 <h6>hex</h6>
-<button class="hex primary">default</button>
-<button class="hex play"    >playing</button>
+<pre><code>default colors:
+default | .green |
+.yellow | .blue  |      sample to create your own .hex.blue { @co1:#048cdb; @co2:#0064cd; #hex > .button(@co1, @co2); }
+.red    | .dark  |      always begin with .hex.(color name) { @co1:colour top, @co2: color bottom; mixing will work by itself} </code></pre>
+<button class="hex">default</button>
+<button class="hex dark">default</button>
+<button class="hex yellow">default</button>
+<button class="hex blue">default</button>
+<button class="hex play blue"    >playing</button>
+<button class="hex work green"    >five</button>
+<button class="hex kill yellow"    >playing</button>
+<button class="hex phone red"   >phone</button>
+<button class="hex dice dark"    >playing</button>
 <button class="hex add"     >add</button>
 <button class="hex edit"    >edit</button>
 <button class="hex delete"  >delete</button>

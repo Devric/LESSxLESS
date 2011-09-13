@@ -1,5 +1,13 @@
-button.hex
-{
+//dependent on mixing
+/* colors */
+.hex.blue   { @co1:#048cdb; @co2:#0064cd; #hex > .button(@co1, @co2); }
+.hex.green  { @co1:#62c462; @co2:#57a957; #hex > .button(@co1, @co2); }
+.hex.yellow { @co1:#C5C500; @co2:#A49C00; #hex > .button(@co1, @co2); }
+.hex.red    { @co1:#D80039; @co2:#B0002E; #hex > .button(@co1, @co2); }
+.hex.dark   { @co1:#474747; @co2:#282828; #hex > .button(@co1, @co2); }
+
+/* base theme */
+button.hex {
     min-width:125px;
     color: #333;
     margin: 0.2em;
@@ -19,8 +27,7 @@ button.hex
 button.hex, input.hex { cursor: pointer; overflow: visible; /* removes extra side spacing in IE */ }
 
 /* The disabled styles */
-button.hex[disabled], button.hex[disabled]:hover, .hex.disabled, .hex.disabled:hover
-{
+button.hex[disabled], button.hex[disabled]:hover, .hex.disabled, .hex.disabled:hover {
     background: #eee;
     color: #aaa;
     border-color: #aaa;
@@ -33,15 +40,13 @@ button.hex[disabled], button.hex[disabled]:hover, .hex.disabled, .hex.disabled:h
 }
 
 
-button.hex:hover
-{
+button.hex:hover {
     background-color: #ddd;
     #gradient > .v(#fafafa, #ddd);
     #shadow > .inset-box-shadow;
 }
 
-button.hex:before
-{
+button.hex:before {
     width: 1em;
     min-width: 1em;
     float: left;
@@ -58,6 +63,26 @@ button.hex:before
 //moz-fix
 button.hex::-moz-focus-inner { border: 0; padding: 0; } /* removes extra inner spacing in Firefox */
 input::-moz-focus-inner { padding: .4em; } /* If line-height can't be modified, then fix Firefox spacing with padding */
+
+
+/* ---------------------
+ * hex color mixing
+ * -------------------*/
+#hex {
+    .button(@co1:#048cdb, @co2:#0064cd){
+        color:@white;
+        #gradient > .v3( @co1, @co1, 25%, @co2 );
+        #shadow   > .inset-box-shadow(0,0,1px,1px,rgba(255,255,255,.1));
+        border-color:rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+        &:hover {
+            color:@white;
+            #shadow   > .inset-box-shadow(-1px,2px,2px,0,rgba(0,0,0,.3));
+            border-color:rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+            #gradient > .v3( darken(@co1, 5%), darken(@co1, 5%), 25%, darken(@co2, 5%) );
+        }
+    }
+}
+
 
 /* Hexadecimal entities for the icons */
 .hex.add:before     { content: "\271A"; }
