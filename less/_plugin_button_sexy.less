@@ -1,6 +1,10 @@
-// depency
-// - mixing.less
-// Sexy buttons
+// dependency
+/* - mixing.less */
+// plugin: 
+/* 
+ * Sexy button 
+ *
+ * */
 
 button.sexy {@co1:#558ac7;@co2:darken(@co1, 8%);
     height:50px;
@@ -11,7 +15,7 @@ button.sexy {@co1:#558ac7;@co2:darken(@co1, 8%);
     padding-top:12px;
     #border > .border-radius(4px);
     border:1px solid rgba(0,0,0,0.4);
-    #shadow > .box-shadow(0,0px,2px, @co2);
+    #shadow > .box-shadow(0,0px,5px, rgba(0,0,0,0.4));
     #shadow > .text-shadow(0 -1px 1px, rgba(0,0,0,0.1));
     #shadow > .inset-box-shadow(0,0px,8px,0px, rgba(255,255,255,0.3));
     #gradient > .v3(@co2, @co1, 90%, @co2);
@@ -19,7 +23,7 @@ button.sexy {@co1:#558ac7;@co2:darken(@co1, 8%);
         @co3:darken(@co2, 16%);@co4:darken(@co3, 10%);
         border:1px solid rgba(0,0,0,0.7);
         #gradient > .v3(@co4, @co3, 90%, @co4);
-        #shadow > .inset-box-shadow(0px,0px,1px,1px, @black);
+        #shadow > .inset-box-shadow(0px,0px,1px,0px, @black);
     }
 }
 
