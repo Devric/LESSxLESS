@@ -25,6 +25,8 @@ h6,.small,p{font-size:1em;line-height:1.2857142857142858em;color:#444;}h6 small,
 p{word-wrap:break-word;}
 i,em{font-style:italic;}
 a{text-decoration:none;}
+sup{font-size:xx-small;vertical-align:text-top;margin:-8px 6px;}
+sub{font-size:xx-small;vertical-align:text-bottom;margin:-8px 6px;}
 h1,h2,h3,h4,h5,h6,p,ul,ol,pre,blockquote,textarea,button,.gigantic,.huge,.large,.bigger,.big,.strong,.small{margin:5px 0 15px;}
 hgroup.coudal h1{font-family:times,Times New Roman,times-roman,georgia,serif;color:#444;margin:0;padding:0px 0px 6px 0px;font-size:51px;line-height:44px;letter-spacing:-2px;font-weight:bold;}
 hgroup.coudal h2{font-family:Gill Sans, Verdana;font-size:11px;line-height:14px;text-transform:uppercase;letter-spacing:2px;font-weight:bold;margin:0;}
