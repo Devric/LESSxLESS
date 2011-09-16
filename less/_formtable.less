@@ -6,17 +6,17 @@ legend { font-weight: bold; padding: 0 .25em; }
 input, textarea, select, button { font-family: inherit; font-size: 1em; }
 input[type=text], input[type=password], input[type=email], textarea { 
     color:gray;
-    padding:4px;
     border:1px solid #ccc;
     min-width:163px;
     #border > .border-radius(3px);
     #shadow > .inset-box-shadow(0 1px 3px #eee);
 }
 
-label {
-    padding-top:6px;
-    display:block;
-    color:#404040;
+label { padding-top:6px; display:block; color:#404040; }
+
+fieldset p{
+    label, input, select { display:inline-block; }
+    select {margin-top:6px;} 
 }
 
 input[type=button], input[type=file], input[type=image], input[type=reset], input[type=submit],
@@ -77,8 +77,8 @@ fieldset, #IE8#HACK { padding-top:1.4em; }
 legend, #IE8#HACK { margin-top:0; margin-bottom:0; }
 
 /* alert messages */
-.alert   { padding: 0.5em; margin:0.5em 0; border: 2px solid #ddd; #border > .border-radius(4px); #shadow > .text-shadow(0 1px 0, rgba(0,0,0,.3)); }
-.alert .action { display:block; margin:5px auto 0; text-align:right; }
+.alert { padding: 0.5em; margin:0.5em 0; border: 2px solid #ddd; #border > .border-radius(4px); #shadow > .text-shadow(0 1px 0, rgba(0,0,0,.3)); }
+.alert .action { display:block; margin:5px auto 0; text-align:right; } /* buttons container within action block */
 
 .alert.error   { background: #fbe3e4; color: #8a1f11; border-color: #fbc2c4; } .alert.error a   { color: #8a1f11; }
 .alert.notice  { background: #fff6bf; color: #514721; border-color: #ffd324; } .alert.notice a  { color: #514721; }
@@ -89,7 +89,7 @@ legend, #IE8#HACK { margin-top:0; margin-bottom:0; }
 form div.error { background:#fbe3e4; color:#8a1f11; padding:0.7em; margin-bottom:1em;#border > .border-radius(4px); #shadow > .text-shadow(0 1px 0 @grey);  }
 
 /* help */
-.help { width:100%; margin:3px 0; color:#bfbfbf; display:block; font-size:0.8em; }
+.help { width:100%; margin:3px 0; color:#bfbfbf; display:block; font-size:0.9em; }
 
 
 /* Table
