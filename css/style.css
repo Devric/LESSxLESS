@@ -81,7 +81,7 @@ fieldset .inline input[type=checkbox],fieldset .inline input[type=radio]{float:n
 fieldset .inline label{margin-top:4px;}
 fieldset,#IE8#HACK{padding-top:1.4em;}
 legend,#IE8#HACK{margin-top:0;margin-bottom:0;}
-.alert{padding:0.5em;margin-bottom:1em;border:2px solid #ddd;-webkit-background-clip:padding-box;-webkit-border-radius:4px;-moz-background-clip:padding-box;-moz-border-radius:4px;border-radius:4px;background-clip:padding-box;text-shadow:rgba(0, 0, 0, 0.3) 0 1px 0;}
+.alert{padding:0.5em;margin:0.5em 0;border:2px solid #ddd;-webkit-background-clip:padding-box;-webkit-border-radius:4px;-moz-background-clip:padding-box;-moz-border-radius:4px;border-radius:4px;background-clip:padding-box;text-shadow:rgba(0, 0, 0, 0.3) 0 1px 0;}
 .alert .action{display:block;margin:5px auto 0;text-align:right;}
 .alert.error{background:#fbe3e4;color:#8a1f11;border-color:#fbc2c4;}
 .alert.error a{color:#8a1f11;}
@@ -92,6 +92,7 @@ legend,#IE8#HACK{margin-top:0;margin-bottom:0;}
 .alert.info{background:#d5edf8;color:#205791;border-color:#92cae4;}
 .alert.info a{color:#205791;}
 form div.error{background:#fbe3e4;color:#8a1f11;padding:0.7em;margin-bottom:1em;-webkit-background-clip:padding-box;-webkit-border-radius:4px;-moz-background-clip:padding-box;-moz-border-radius:4px;border-radius:4px;background-clip:padding-box;text-shadow:#cccccc 0 1px 0 #555555;}
+.help{width:100%;margin:3px 0;color:#bfbfbf;display:block;font-size:0.8em;}
 table{margin:5% auto 0;color:#555555;}table tr:nth-child(odd) td{background-color:#f6f6f6;}
 table tr:hover td{background-color:#f9f9f9;}
 caption,th,td{text-align:left;vertical-align:top;}
