@@ -1,5 +1,7 @@
 LESSxLESS
 
+demo: http://devric.co.cc
+
 Features:
 | fluid grid( max 16, default 12, set in style.css )
 | modular based ( can be light as 8kbs or full powered )
