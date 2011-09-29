@@ -1,6 +1,6 @@
 LESSxLESS
 
-demo: http://devric.co.cc
+demo: http://devric.co.cc/lessxless
 
 About:
 | This framework is based on less.js
