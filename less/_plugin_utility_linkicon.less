@@ -1,0 +1,55 @@
+// plugin
+// this automatically adds filetype icons next to the relevent download links
+// http://www.psyked.co.uk/css/auto-matic-link-icons.html
+/*
+ * operators
+ *
+ * ^="http" the ^ means start with
+ * $=".pdf" the $ means ends with
+ *
+ * */
+
+a[href^="http:"] {
+    display:inline-block;
+    background:transparent url(/Images/ExternalLink.gif) center right no-repeat;
+}
+a[href$='.pdf'] {
+    background:transparent url(Images/PDFIcon.gif) center left no-repeat;
+    #linkiconmixing > .linkiconmixing;
+}
+a[href^="mailto:"] {
+    background:transparent url(/Images/MailTo.gif) center left no-repeat;
+    #linkiconmixing > .linkiconmixing;
+}
+a[href$='.pdf'] {
+    background:transparent url(/Images/PDFIcon.gif) center left no-repeat;
+    #linkiconmixing > .linkiconmixing;
+}
+a[href$='.swf'], a[href$='.fla'], a[href$='.swd'] {
+    background:transparent url(/Images/FlashIcon.gif) center left no-repeat;
+    #linkiconmixing > .linkiconmixing;
+}
+a[href$='.xls'], a[href$='.csv'], a[href$='.xlt'], a[href$='.xlw'] {
+    background:transparent url(/Images/ExcelIcon.gif) center left no-repeat;
+    #linkiconmixing > .linkiconmixing;
+}
+a[href$='.ppt'], a[href$='.pps'] {
+    background:transparent url(/Images/PowerPointIcon.gif) center left no-repeat;
+    #linkiconmixing > .linkiconmixing;
+}
+a[href$='.doc'], a[href$='.rtf'], a[href$='.txt'], a[href$='.wps'] {
+    background:transparent url(/Images/WordDocIcon.gif) center left no-repeat;
+    #linkiconmixing > .linkiconmixing;
+}
+a[href$='.zip'], a[href$='.gzip'], a[href$='.rar'] {
+    background:transparent url(/Images/ZIPIcon.gif) center left no-repeat;
+    #linkiconmixing > .linkiconmixing;
+}
+
+#linkiconmixing {
+    .linkiconmixing{
+        display:inline-block;
+        padding-left:20px;
+        line-height:normal;
+    }
+}

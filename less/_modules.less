@@ -175,4 +175,25 @@
         ms-filter: ~"progid:DXImageTransform.Microsoft.Alpha(Opacity=%50)";
 	filter: ~"alpha(opacity=%50)";
     }
+
+    //using border to create coners
+    .dtip-content span:before,
+    .dtip-content span:after {
+        content: "";
+        position: absolute;
+        z-index: 1000;
+        bottom: -7px;
+        left: 50%;
+        margin-left: -8px;
+        border-top: 8px solid #ddd;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-bottom: 0;
+    }
+
+    .dtip-content span:before {
+        border-top-color: #ccc;
+        bottom: -8px;
+    }
+        
 }

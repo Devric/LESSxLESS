@@ -2,6 +2,12 @@ LESSxLESS
 
 demo: http://devric.co.cc
 
+About:
+| This framework is based on less.js
+| It is suitable for front end designers! NOT developers, it only provides 
+  basic style and helpers classes/mixings.
+| The classes that work straight out of the box are the modules and the basic site layout, everything else is mixings
+
 Features:
 | fluid grid( max 16, default 12, set in style.css )
 | modular based ( can be light as 8kbs or full powered )
