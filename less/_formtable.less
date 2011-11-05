@@ -14,9 +14,12 @@ input[type=text], input[type=password], input[type=email], textarea {
 
 label { padding-top:6px; display:block; color:#404040; }
 
-fieldset p{
-    label, input, select { display:inline-block; }
+fieldset.inline, fieldset p {
+    label, input[type=text], input[type=password], input[type=file], select, textarea { display:inline-block; width:68%}
+    label { text-align:right; padding-right:15px; vertical-align:top; padding-top:2px; width:30% }
     select {margin-top:6px;} 
+    input[type=checkbox], input[type=radio] { float:none; }
+    input[type=button], button, .button { float:right }
 }
 
 input[type=button], input[type=file], input[type=image], input[type=reset], input[type=submit],
@@ -60,21 +63,15 @@ textarea { line-height: 1.25; text-align: left; }
         #border > .multi-radius(0,3px,3px,0);
     }
     input[type=text],input[type=pass] {
-        #border > .multi-radius(3px, 0, 0, 3px);
         margin:0;
         padding:5px;
         border-right:0;
+        #border > .multi-radius(3px, 0, 0, 3px);
     }
 }
-/* float left inline */
-fieldset .inline {
-    label, input, textarea, select, button { display:inline; float:left; margin-left:10px;}
-    input[type=checkbox], input[type=radio] { float:none; }
-    label { margin-top:4px; }
-}
-/* ie8 hackes*/
-fieldset, #IE8#HACK { padding-top:1.4em; } 
-legend, #IE8#HACK { margin-top:0; margin-bottom:0; }
+///* ie8 hackes*/
+//fieldset, #IE8#HACK { padding-top:1.4em; } 
+//legend, #IE8#HACK { margin-top:0; margin-bottom:0; }
 
 /* alert messages */
 .alert { padding: 0.5em; margin:0.5em 0; border: 2px solid #ddd; #border > .border-radius(4px); #shadow > .text-shadow(0 1px 0, rgba(0,0,0,.3)); }

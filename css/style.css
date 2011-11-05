@@ -68,8 +68,11 @@ legend{font-weight:bold;padding:0 .25em;}
 input,textarea,select,button{font-family:inherit;font-size:1em;}
 input[type=text],input[type=password],input[type=email],textarea{color:gray;border:1px solid #ccc;min-width:163px;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-moz-background-clip:padding-box;-moz-border-radius:3px;border-radius:3px;background-clip:padding-box;-webkit-box-shadow:inset 0 1px 3px #eeeeee 1px 2px 0 #cccccc;-moz-box-shadow:inset 0 1px 3px #eeeeee 1px 2px 0 #cccccc;box-shadow:inset inner 0 1px 3px #eeeeee 1px 2px 0 #cccccc;}
 label{padding-top:6px;display:block;color:#404040;}
-fieldset p label,fieldset p input,fieldset p select{display:inline-block;}
-fieldset p select{margin-top:6px;}
+fieldset.inline label,fieldset p label,fieldset.inline input[type=text],fieldset p input[type=text],fieldset.inline input[type=password],fieldset p input[type=password],fieldset.inline input[type=file],fieldset p input[type=file],fieldset.inline select,fieldset p select,fieldset.inline textarea,fieldset p textarea{display:inline-block;width:68%;}
+fieldset.inline label,fieldset p label{text-align:right;padding-right:15px;vertical-align:top;padding-top:2px;width:30%;}
+fieldset.inline select,fieldset p select{margin-top:6px;}
+fieldset.inline input[type=checkbox],fieldset p input[type=checkbox],fieldset.inline input[type=radio],fieldset p input[type=radio]{float:none;}
+fieldset.inline input[type=button],fieldset p input[type=button],fieldset.inline button,fieldset p button,fieldset.inline .button,fieldset p .button{float:right;}
 input[type=button],input[type=file],input[type=image],input[type=reset],input[type=submit],button[type=button],button[type=reset],button[type=submit]{cursor:pointer;line-height:1;}
 textarea{line-height:1.25;text-align:left;}
 .input-prepend,.input-append{margin:5px;}
@@ -79,12 +82,7 @@ textarea{line-height:1.25;text-align:left;}
 .input-prepend input[type=text],.input-prepend input[type=pass]{-webkit-border-top-left-radius:0;-webkit-border-top-right-radius:3px;-webkit-border-bottom-right-radius:3px;-webkit-border-bottom-left-radius:0;-moz-border-radius-topleft:0;-moz-border-radius-topright:3px;-moz-border-radius-bottomright:3px;-moz-border-radius-bottomleft:0;border-top-left-radius:0;margin:0;padding:5px;border-left:0;}
 .input-append .add-on,.input-append input{float:right;}
 .input-append .add-on{-webkit-border-top-left-radius:0;-webkit-border-top-right-radius:3px;-webkit-border-bottom-right-radius:3px;-webkit-border-bottom-left-radius:0;-moz-border-radius-topleft:0;-moz-border-radius-topright:3px;-moz-border-radius-bottomright:3px;-moz-border-radius-bottomleft:0;border-top-left-radius:0;}
-.input-append input[type=text],.input-append input[type=pass]{-webkit-border-top-left-radius:3px;-webkit-border-top-right-radius:0;-webkit-border-bottom-right-radius:0;-webkit-border-bottom-left-radius:3px;-moz-border-radius-topleft:3px;-moz-border-radius-topright:0;-moz-border-radius-bottomright:0;-moz-border-radius-bottomleft:3px;border-top-left-radius:3px;margin:0;padding:5px;border-right:0;}
-fieldset .inline label,fieldset .inline input,fieldset .inline textarea,fieldset .inline select,fieldset .inline button{display:inline;float:left;margin-left:10px;}
-fieldset .inline input[type=checkbox],fieldset .inline input[type=radio]{float:none;}
-fieldset .inline label{margin-top:4px;}
-fieldset,#IE8#HACK{padding-top:1.4em;}
-legend,#IE8#HACK{margin-top:0;margin-bottom:0;}
+.input-append input[type=text],.input-append input[type=pass]{margin:0;padding:5px;border-right:0;-webkit-border-top-left-radius:3px;-webkit-border-top-right-radius:0;-webkit-border-bottom-right-radius:0;-webkit-border-bottom-left-radius:3px;-moz-border-radius-topleft:3px;-moz-border-radius-topright:0;-moz-border-radius-bottomright:0;-moz-border-radius-bottomleft:3px;border-top-left-radius:3px;}
 .alert{padding:0.5em;margin:0.5em 0;border:2px solid #ddd;-webkit-background-clip:padding-box;-webkit-border-radius:4px;-moz-background-clip:padding-box;-moz-border-radius:4px;border-radius:4px;background-clip:padding-box;text-shadow:rgba(0, 0, 0, 0.3) 0 1px 0;}
 .alert .action{display:block;margin:5px auto 0;text-align:right;}
 .alert.error{background:#fbe3e4;color:#8a1f11;border-color:#fbc2c4;}
@@ -304,7 +302,6 @@ fieldset.sexyform input.success{color:#264409;background:#E6EFC2;border:1px soli
 fieldset.sexyform input.success:after{content:"\2714";}
 .quillform{font-family:'Shadows Into Light',cursive;font-size:1.4em;}.quillform input[type=text],.quillform input[type=email],.quillform input[type=password],.quillform textarea{border:none;border-bottom:1px dashed #bababa;background:transparent;min-width:160px;}
 .quillform select{min-width:160px;}
-.quillform label,.quillform input{vertical-align:top;}
 .quillform input:focus,.quillform textarea{outline:none;}
 .quillform input.error{color:#8a1f11;}
 .quillform input.success{color:#89c14b;}
