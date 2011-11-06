@@ -18,6 +18,7 @@
 // | - plugins
 // | -----------------
 // | -- lazyload $('img.lazy').lazyload({threshold: 30}); // the threashold is to tell the browser to load when it about 30px close to the content
+// | -- devSizing $('selector').devSizing({content:'img'}); // auto height if it longer than width, default selects the images within selector.
 
 
 // -----------------
@@ -31,15 +32,7 @@ $(document).ready(function() {
 // window ready
 // -----------------
 $(window).load(function(){ 
-    // img size controller
-    $('.item').each(function(){
-        var obj = $(this),
-            maxside = obj.width(),
-            h = obj.find('img').height();
-        if(h > maxside){
-            obj.find('img').css({height:maxside / 1.1, width:'auto', 'margin-left': '20%'});
-        }
-    });
+
 });
 
 // -----------------
@@ -85,3 +78,29 @@ function goToByScroll(id){
         });
     };
 })(jQuery);
+
+// devSizing
+(function($){ 
+    $.fn.extend({
+        devSizing: function(options){
+            var defaults = {
+                content : 'img'
+            };
+            var options = $.extend(defaults, options);
+            return this.each(function(){
+                var o = options;
+                var obj = $(this);
+                
+                $(window).load(function(){ 
+                    maxside = obj.width();
+                    h = obj.find(o.content).height();
+
+                    if(h > maxside){
+                        obj.find(o.content).css({ height:maxside / 1.1, width:'auto', 'margin-left':'20%'});
+                    }
+                }); //end window.load
+
+            });
+        }
+    });
+})(jQuery); //end devSizing
