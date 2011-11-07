@@ -92,11 +92,22 @@ function goToByScroll(id){
                 var obj = $(this);
                 
                 $(window).load(function(){ 
-                    maxside = obj.width();
-                    h = obj.find(o.content).height();
+                    var w  = obj.outerWidth(),
+                        h  = obj.height();
 
-                    if(h > maxside){
-                        obj.find(o.content).css({ height:maxside / 1.1, width:'auto', 'margin-left':'20%'});
+                    if(h > w){
+                        obj.find(o.content).css({
+                            'height': w,
+                            'width' : 'auto'
+                        });
+
+                        // define new width and center the img
+                        var newWidth = obj.find(o.content).outerWidth(),
+                            center  = (w - newWidth)/2;
+
+                        obj.find(o.content).css({
+                            'margin-left': center
+                        });
                     }
                 }); //end window.load
 
