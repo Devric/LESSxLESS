@@ -1,138 +1,33 @@
-@leading:@line - @fontpxem; /* the true leading = line height - font size */
-@bodyfont:100% * (@fontpx/16); /* body font size in percentages */
-@line:@linepx/@fontpx * 1em; /* line height in ems */ 
-@fontpxem:@fontpx * 1em; /* convert to em */
-@linepxem:@linepx * 1em; /* convert to em */
+body {
+    //line-height: @line;
+    //font-size:   @bodyfont;
+    font-family: @fontfamily;
+}
 
-body { line-height: @line; font-size:   @bodyfont; font-family: @fontfamily; }
 h1,h2,h3,h4,h5,h6,strong { font-weight: bold; }
 
-.gigantic           { @font:20em;  font-size:@font; line-height: @line/@font*15;  }
-h1, .huge           { @font:5em;   font-size:@font; line-height: @line/@font*4;   small { font-size:0.5em; line-height:normal;}}
-h2, .large          { @font:4em;   font-size:@font; line-height: @line/@font*3;   small { font-size:0.5em; line-height:normal;}}
-h3, .bigger         { @font:3em;   font-size:@font; line-height: @line/@font*2;   small { font-size:0.6em; line-height:normal;}}
-h4, .big            { @font:2em;   font-size:@font; line-height: @line/@font*1.5; small { font-size:0.6em; line-height:normal;}}
-h5, .strong, strong { @font:1.2em; font-size:@font; line-height: @line/@font/4;   small { font-size:0.6em; line-height:normal;}}
-h6, .small, p       { @font:1em;   font-size:@font; line-height: @line/@font;     small { font-size:0.6em; line-height:normal;} color:#444;}
-.tiny               { @font:0.9em; font-size:@font; padding:@line/(@font*5) 0;    small { font-size:0.6em; line-height:normal;}}
+.huge     { @font:14em;     font-size:@font;  line-height: 0.89em  }
+h1,.h1    { @font:4.25em;   font-size:@font;  line-height: 1.14em  }
+h2,.h2    { @font:2.62em;   font-size:@font;  line-height: 1.24em  }
+h3,.h3    { @font:2.15em;   font-size:@font;  line-height: 1.2em  }
+h4,.h4    { @font:1.63em;   font-size:@font;  line-height: 1.4em  }
+h5,.h5    { @font:1.4em;    font-size:@font;  line-height: 1.3em  }
+h6,.h6, p { @font:1em;      font-size:@font;  line-height: 1.7em  }
+small     { @font:0.625em;  font-size:@font;  }
 
-p {word-wrap:break-word;}
-i, em {font-style: italic;}
-a { text-decoration:none; }
-sup { font-size:xx-small; vertical-align:text-top; margin:-8px 6px; }
-sub { font-size:xx-small; vertical-align:text-bottom; margin:-8px 6px; }
+p     { word-wrap:break-word;}
+i, em { font-style: italic;}
+a     { text-decoration:none; }
+sup   { font-size:xx-small;  vertical-align:text-top;     margin:0px 2px }
+sub   { font-size:xx-small;  vertical-align:text-bottom;  margin:0px 2px }
 
-/* Block Baselines */
-h1, h2, h3, h4, h5, h6,
+/* consistent margin */
+h1, h2, h3, h4, h5, h6, i, em, a
 p, ul, ol, pre, blockquote,
-textarea, button, .gigantic,
-.huge,.large,.bigger,.big,
-.strong,.small { margin: 5px 0 15px; }
+textarea, button, strong, small,
+.huge, .h1,.h2,.h3,.h4,.h5,.h6 
+{ margin: 5px 0 15px }
 
-
-/* ================== //
-// =    hgroups     = //
-// ================== */
-/*
- * coudal
- * timoni
- * ale
- * noob
- * */
-hgroup.coudal {
-    h1 {
-        font-family: times, Times New Roman, times-roman, georgia, serif;
-        color: #444;
-        margin: 0;
-        padding: 0px 0px 6px 0px;
-        font-size: 51px;
-        line-height: 44px;
-        letter-spacing: -2px;
-        font-weight: bold;
-    }
-    h2 {
-        font-family: Gill Sans, Verdana;
-        font-size: 11px;
-        line-height: 14px;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        font-weight: bold;
-        margin:0;
-    }
-}
-hgroup.timoni {
-    h1 {
-        font-size: 12px;
-	font-family: Georgia, 'Times New Roman', serif;
-	color: #000;
-	text-align: center;
-        font-weight: 100; 
-    }
-    h2 {
-        font-family:  'Hoefler Text', Georgia, 'Times New Roman', serif;
-        font-weight: normal;
-        font-size: 1.75em;
-        letter-spacing: .2em;
-        line-height: 1.1em;
-        margin:0px;
-        text-align: center;
-        text-transform: uppercase;
-    }
-}
-hgroup.ale    {
-    h1 {
-        font-family: Georgia, "Times New Roman", Times, serif;
-        font-size:24px;
-        margin-top: 5px; margin-bottom: 0px;
-        text-align: center;
-        font-weight: normal;
-        color: #222;
-    }
-    h2 {
-        font-family: "Lucida Grande", Tahoma;
-        font-size: 10px;
-        font-weight: lighter;
-        font-variant: normal;
-        text-transform: uppercase;
-        color: #666666;
-        margin-top: 6px;
-        text-align: center!important;
-        letter-spacing: 0.3em;
-    }    
-}
-hgroup.noob   {
-    h1 {
-        font-size: 85%;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        color: #bbb;
-        font-size: 10px;
-        font-family: "Lucida Grande", Verdana, Helvetica, Arial, sans-serif;
-        font-weight: 100;	
-        float:right;
-        clear:both;
-        margin:0;
-    }
-    h2 {
-        font: bold 34px "Century Schoolbook", Georgia, Times, serif;
-        color: #333;
-        line-height: 90%;
-        margin: .2em 0 .4em 0;
-        letter-spacing: -2px;
-        float:right;
-        clear:both;
-    }
-    h3 {
-        color: #76879b;
-        font-size: 10px;
-        margin: 0 5px 5px 5px;
-        font-family: "Lucida Grande", Verdana, Helvetica, Arial, sans-serif;
-        font-size: 11px;
-        clear:both;
-        text-align:right;
-        line-height: 3px;
-    }   
-}
 
 /* ================== //
 // =    fonts       = //
