@@ -1,7 +1,7 @@
 /*****************************
 fluid
  ****************************/
-/* default 12, up to 16, use @grids to change between 4 to 16 !note! its always smart to use more grids if the project is not planned before hand.
+/* default 12, up to 16, use @grids to change between 4 to 16.
  *
  * @classes
  * .last : kill last margin
@@ -11,8 +11,8 @@ fluid
  * */
 
 //grids variable doubled in style.less
-//@grids: 12; //# of grids, up to 16
-//@gut: 2.8%; //gutter width
+@grids: 12; //# of grids, up to 16
+@gut: 2.8%; //gutter width
 
 .row, .row .row { position:relative; width:100%; margin:5px auto; clear:both; display:block; }
 .col {  float:left; margin-right: @gut; display:block;}
@@ -57,3 +57,19 @@ fluid
 .p13 { .push(13) }
 .p14 { .push(14) }
 .p15 { .push(15) }
+
+/* --- mobile grid lt 801 -- */ @media only screen and (max-width: 801px) {
+    
+    .col { width:100%;   }          // make all grid 100% fluid
+
+    /* hiding device unfriendly elements */
+    .p1,.p2,.p3,.p4,.p5,.p6,.p7,
+    .p8,.p9,.p10,.p11,.p12,.p13,
+    .p14,.p15,                      // hide push
+    .device-hide { display:none }   // hide element for device    
+    
+    /* redefinging column width */
+    .col.half { .singlecol(6) }     // maintain two col
+    .col.third { .singlecol(4) }    // maintain thee col
+
+} // max 801

@@ -10,6 +10,7 @@
 @import "_grid";
 
 //plugins
+@import "_plugin_font_hgroup";
 @import "_plugin_button_pulse";
 @import "_plugin_button_sexy";
 @import "_plugin_button_hex";
@@ -23,17 +24,19 @@
 
 //grids variables
 @grids: 12; //# of grids, up to 16
-@gut: 2.6%; //gutter width
+@gut: 1.6%; //gutter width
 
-html {
-                /* flow-x, flow-y */
-    #sitebase > .html( hidden, auto );
-}
 /*
 ************************
     basic setup
 ************************
  */
+
+html {
+                /* flow-x, flow-y */
+    #sitebase > .html( hidden, auto );
+}
+
 body {             /* height, padding  */
     #sitebase > .body(100%, 0);
     // behavior: url("css/csshover3.htc"); // remove the less comment to use for :hover,:active,:focus to work on all element in ie6, it is related to html not css file
@@ -43,9 +46,8 @@ body {             /* height, padding  */
 }
 
 /* font type */
-@fontpx:14; /* | font size in px     | */
-@linepx:18; /* | line height in "px" | */
-@fontfamily: Arial, sans-serif; 
+@globalfont: 1em;
+@fontfamily: Palatino, 'Palatino Linotype', 'Book Antiqua', FreeSerif, Gerogia, serif;
 
 /* font link color */
 a {
