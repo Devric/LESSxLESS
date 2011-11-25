@@ -1,21 +1,20 @@
 body {
-    //line-height: @line;
-    //font-size:   @bodyfont;
+    font-size:   @globalfont;
     font-family: @fontfamily;
 }
 
 h1,h2,h3,h4,h5,h6,strong { font-weight: bold; }
 
-.huge     { @font:14em;     font-size:@font;  line-height: 0.89em  }
-h1,.h1    { @font:4.25em;   font-size:@font;  line-height: 1.14em  }
-h2,.h2    { @font:2.62em;   font-size:@font;  line-height: 1.24em  }
-h3,.h3    { @font:2.15em;   font-size:@font;  line-height: 1.2em  }
-h4,.h4    { @font:1.63em;   font-size:@font;  line-height: 1.4em  }
-h5,.h5    { @font:1.4em;    font-size:@font;  line-height: 1.3em  }
-h6,.h6, p { @font:1em;      font-size:@font;  line-height: 1.7em  }
-small     { @font:0.625em;  font-size:@font;  }
+.huge       { font-size:  @globalfont * 14;    line-height:  0.95em }
+h1,.h1      { font-size:  @globalfont * 4.24;  line-height:  1.1em }
+h2,.h2      { font-size:  @globalfont * 2.62;  line-height:  1.24em }
+h3,.h3      { font-size:  @globalfont * 2.15;  line-height:  1.2em  }
+h4,.h4      { font-size:  @globalfont * 1.63;  line-height:  1.4em  }
+h5,.h5      { font-size:  @globalfont * 1.4;   line-height:  1.3em  }
+h6,.h6, p,
+dt, dd,li   { font-size:  @globalfont * 1;     line-height:  1.7em  }
+small       { font-size:  @globalfont * 0.625; }
 
-p     { word-wrap:break-word;}
 i, em { font-style: italic;}
 a     { text-decoration:none; }
 sup   { font-size:xx-small;  vertical-align:text-top;     margin:0px 2px }
