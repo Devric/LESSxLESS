@@ -7,3 +7,23 @@
 /* --- 480px mobile --------- */ @media only screen and (min-width: 480px) and (max-width: 800px) { }
 /* --- iPads (landscape) ---- */ @media only screen and (orientation : landscape) and (min-device-width : 768px) and (max-device-width : 1024px) { } 
 /* --- iPads (portrait) ----- */ @media only screen and (orientation : portrait) and (min-device-width : 768px) and (max-device-width : 1024px) { } 
+
+
+/* --- mobile -- */ @media only screen and (max-width: 801px) {
+    
+    #site { padding:0 5px; }
+
+
+    /* grid
+     ------------------------ */
+    .col { width:100%;   }       // make all grid 100% fluid
+
+    .p1,.p2,.p3,.p4,.p5,.p6,.p7,
+    .p8,.p9,.p10,.p11,.p12,.p13,
+    .p14,.p15,                   // hide push
+    .device-hide { display:none }// hide element for device    
+    
+    .col.half { width:48.77%; }  // maintain two col
+    .col.third { width:31.65%; }  // maintain thee col
+
+} // max 801
