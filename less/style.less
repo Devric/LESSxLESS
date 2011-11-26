@@ -1,13 +1,13 @@
 @import "_reset";
 @import "_var";
-@import "_font";
-@import "_layout";
-@import "_formtable";
-@import "_nav";
 @import "_utility";
 @import "_mixin";
-@import "_modules";
+@import "_font";
+@import "_layout";
+@import "_nav";
 @import "_grid";
+@import "_formtable";
+@import "_modules";
 
 //plugins
 @import "_plugin_font_hgroup";
@@ -26,11 +26,8 @@
 @grids: 12; //# of grids, up to 16
 @gut: 1.6%; //gutter width
 
-/*
-************************
-    basic setup
-************************
- */
+/* basic setup
+========================= */
 
 html {
                 /* flow-x, flow-y */
@@ -56,16 +53,14 @@ a {
     &:hover {color:darken(@color, 10); }
 }
 
-/* =====================
-        structure
-   ===================== */
+/* structure
+========================= */
 #header {}
 #content {}
 #footer {}
 
-/* ================== //
-// =common element  = //
-// ================== */
+/* common element
+========================= */
 header {  }
 section{ margin-bottom:80px;}
 footer {  }

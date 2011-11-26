@@ -1,0 +1,62 @@
+/* base list
+ ---------------------------*/
+ul.square { list-style: square outside; }
+ul.circle { list-style: circle outside; }
+ul.disc   { list-style: disc outside; }
+ol        { list-style: decimal; }
+
+ul ul, ul ol,
+ol ol, ol ul   { margin-left:30px;}
+
+li   { line-height: 18px; margin-bottom: 1.1em; }
+li p { line-height: 21px; }
+
+
+/* ordered list */
+ol { counter-reset: olfirst; /* our father OL must have olfirst item reseted */ }
+ol ol { counter-reset: olsecond; /* our sub OL's reset the olsecond, third must to be olthird and so on */ }
+ol ol ol { counter-reset: olthird; /* our sub OL's reset the olsecond, third must to be olthird and so on */ }
+    ol li {
+        counter-increment: olfirst; /* when we have a item that is children of first OL, it increases first counter*/
+    }
+    ol li ol li {
+        counter-increment: olsecond; /* when the item is children of a OL that is children of another OL, so it is a sub OL */
+    }
+    ol li ol li ol li {
+        counter-increment: olthird; /* when the item is children of a OL that is children of another OL, so it is a sub OL */
+    }
+    ol li:before {
+        content: counter(olfirst) " - "; /* let's output our pretty number */
+    }
+    ol li ol li:before {
+        content: counter(olfirst) "." counter(olsecond) "." counter(olthird) " - "; /* let's output our "sub-number" */
+    }
+
+/* step ordered list */
+.step {
+    h1 {
+        counter-increment: first;
+        counter-reset:second;
+        font-size:2.5em;
+        font-weight:bold;
+    }
+    h1:before { content: "Step " counter(first) " - "; }
+    h2 {
+        counter-increment: second;
+        counter-reset:third;
+        font-size:2.0em;
+        font-weight:bold;
+    }
+    h2:before { content: "Step " counter(second) " - "; }
+    h3 {
+        counter-increment: third;
+        font-size:1.5em;
+        font-weight:bold;
+    }
+    h3:before {
+        content: counter(first) "." counter(second) "." counter(third) "-";
+    }
+
+    ol,ul { margin:10px 0 10px 10px; }
+    ul { list-style-type:disc; }
+}

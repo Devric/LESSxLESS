@@ -1,6 +1,5 @@
-/*****************************
-fluid
- ****************************/
+/* fluid
+========================= */
 /* default 12, up to 16, use @grids to change between 4 to 16.
  *
  * @classes
@@ -12,7 +11,7 @@ fluid
 
 //grids variable doubled in style.less
 @grids: 12; //# of grids, up to 16
-@gut: 2.8%; //gutter width
+@gut: 2.6%; //gutter width
 
 .row, .row .row { position:relative; width:100%; margin:5px auto; clear:both; display:block; }
 .col {  float:left; margin-right: @gut; display:block;}
@@ -42,7 +41,7 @@ fluid
 .g16 { .singlecol(16) }
 
 .push(@grid:1) { margin-left: (@grid * @fullcol ) }
-.p1 { .push(1) }
+.p1 { .push(1.007) }
 .p2 { .push(2) }
 .p3 { .push(3) }
 .p4 { .push(4) }
