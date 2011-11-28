@@ -4,9 +4,12 @@
 @import "_mixin";
 @import "_font";
 @import "_layout";
-@import "_nav";
 @import "_grid";
 @import "_formtable";
+
+@import "_base_table";
+@import "_base_button";
+@import "_nav";
 @import "_modules";
 
 //plugins
@@ -22,12 +25,12 @@
 //media screens, only if required
 @import "_media";
 
+/* basic setup
+========================= */
+
 //grids variables
 @grids: 12; //# of grids, up to 16
 @gut: 1.6%; //gutter width
-
-/* basic setup
-========================= */
 
 html {
                 /* flow-x, flow-y */
