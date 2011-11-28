@@ -1,0 +1,35 @@
+/* Table
+--------------------------- */
+/* layout and align */
+table   { width: 100%; margin-bottom:18px }
+caption { padding-bottom: 1em; text-align:center; }
+
+th, td  { padding:9px 10px; vertical-align:top; text-align:center; }
+th      { padding-top:20px; text-shadow: 1px 1px 1px #fff; background:#e8eaeb; font-weight:bold;}
+th:first-child,td:first-child  { text-align:left; }
+
+tr { border-top:1px solid #e0e0e0; border-bottom:1px solid #e0e0e0; }
+
+/* zebra styles even rows */
+table tbody tr.even,
+table tbody tr:nth-child(even) { background: #f9f9f9; }
+
+/* hover line */
+table.line {
+    margin:5% auto 0;
+    color:@grey;
+    /* stripe */
+    tr:nth-child(odd) td {
+        background-color: #f6f6f6;
+    }
+    tr:hover td {
+        background-color: #E6E6E6;
+    }
+}
+
+/* add grid */
+table.grid {
+    border:1px solid #e0e0e0;
+    td {border-top:1px solid #e0e0e0; border-right:1px solid #e0e0e0;}
+    th:last-child,td:last-child  { border-right:0; }
+}

@@ -1,15 +1,12 @@
-/* nav */
-.hnav {
-    .clear
-    li { float:left; display:block; }
-}
-
 /* clear */
 .clear,
 .clearfix:after   { clear:both; }
 .clearfix:before,
 .clearfix:after   { content:""; display:table; }
 .clearfix         { zoom:1 } // For IE 6/7 (trigger hasLayout)
+
+.overhide   { overflow:hidden}
+.overscroll { overflow:scroll}
 
 /* image */
 .fullscale { width:100%; min-width:100%; height: auto; }
@@ -41,8 +38,6 @@ body {-webkit-tap-highlight-color: rgb(255,255,158);}
 /* background color */
 .backgrey { background-color:#eee; }
 .backblue { background-color:#77d7f9; }
-
-.overhide { overflow:hidden}
 
 .bgrey    {background-color: @grey                 }
 .bgrey1   {background-color: #ccc   }

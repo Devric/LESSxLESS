@@ -1,0 +1,63 @@
+/* buttons
+---------------------------------------- */
+button {
+    cursor:pointer;
+    padding:5px 20px;
+    background:@white;
+    border:1px solid #eee;
+    #border > .border-radius;
+    #shadow > .box-shadow(1px,1px,5px,#eee);
+    #shadow > .text-shadow(1px 0px 1px, #888);
+}
+
+/* shapes */
+button.pill { #border > .border-radius(30px); }
+button.strong { @h:35px; height:@h; min-height:@h; max-height:@h; padding:5px 10px; }
+button.small { @h:25px; height:@h; min-height:@h; max-height:@h; padding:3px 6px; }
+
+/* colours */
+button.blue,
+button.green,
+button.yellow,
+button.pink,
+button.orange,
+button.red,
+button.sky,
+button.lime,
+button.primary { color:white; }
+
+button.blue { @color:@blue;
+    background-color:@color;
+    border:1px solid darken(@color,5%);
+    &:hover { background-color:lighten(@color,10%); border:1px solid lighten(@color,5%); }
+}
+
+button.green { @color:@green;
+    background-color:@color;
+    border:1px solid darken(@color,5%);
+    &:hover { background-color:lighten(@color,10%); border:1px solid lighten(@color,5%); }
+}
+
+button.yellow { @color:@yellow;
+    background-color:@color;
+    border:1px solid darken(@color,5%);
+    &:hover { background-color:lighten(@color,10%); border:1px solid lighten(@color,5%); }
+}
+
+button.pink { @color:@pink;
+    background-color:@color;
+    border:1px solid darken(@color,5%);
+    &:hover { background-color:lighten(@color,10%); border:1px solid lighten(@color,5%); }
+}
+
+button.orange { @color:@orange;
+    border:1px solid darken(@color,5%);
+    background-color:lighten(@color,15%);
+    &:hover { background-color:lighten(@color,10%); border:1px solid lighten(@color,5%); }
+}
+
+button.red { @color:@red;
+    border:1px solid @color;
+    background-color:lighten(@color,15%);
+    &:hover { background-color:lighten(@color,20%); border:1px solid lighten(@color,5%); }
+}
