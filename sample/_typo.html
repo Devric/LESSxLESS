@@ -12,22 +12,22 @@
         <li>h5, .h5</li>
         <li>h6, .h6, p</li>
     </div>
-<div class="col g5">
-    <h1>Heading 1</h1>
-    <h2>Heading 2</h2>
-    <h3>Heading 3</h3>
-    <h4>Heading 4</h4>
-    <h5>Heading 5</h5>
-    <h6>Heading 6</h6>
-</div>
-<div class="col g4 last">
-    <h1>H1<small>small</small></h1>
-    <h2>H2<small>small</small></h2>
-    <h3>H3<small>small</small></h3>
-    <h4>H4<small>small</small></h4>
-    <h5>H5<small>small</small></h5>
-    <h6>H6<small>small</small></h6>
-</div>
+    <div class="col g5 device-half">
+        <h1>Heading 1</h1>
+        <h2>Heading 2</h2>
+        <h3>Heading 3</h3>
+        <h4>Heading 4</h4>
+        <h5>Heading 5</h5>
+        <h6>Heading 6</h6>
+    </div>
+    <div class="col g4 device-half last">
+        <h1>H1<small>small</small></h1>
+        <h2>H2<small>small</small></h2>
+        <h3>H3<small>small</small></h3>
+        <h4>H4<small>small</small></h4>
+        <h5>H5<small>small</small></h5>
+        <h6>H6<small>small</small></h6>
+    </div>
 </div>
 <div class="row"><h1 class="huge">.huge</h1></div>
 <br />
@@ -37,11 +37,11 @@
     </div>
 </div>
 <div class="row justify">
-    <div class="g3 col">
+    <div class="g3 col device-half">
         <p>Nullam non tincidunt nunc. In turpis tellus, placerat eu fringilla sit amet, molestie egestas urna. Vestibulum sit amet eros eros, ac eleifend elit. Nunc volutpat urna non dui pulvinar quis mattis nisl eleifend. In ornare enim eget nisi congue tempor ut eget orci. Non dui pulvinar quis mattis nisl eleifend. In ornare enim eget nisi congue.</p>
         <p class="dropcap">Lorem ipsum <em>emphasised text</em> dolor sit amet, <strong> strong text</strong> consectetur , <abbr title="">abbreviated text</abbr> sed do exercitation <a href="/">link text</a> ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute <ins>inserted text</ins> irure dolor fugiat<code>pariatur. Excepteur sint occaecat code text</code> cupidatat non proident.</p> 
     </div>
-    <div class="g7 col">
+    <div class="g7 device-hide col">
         <p>Vestibulum sit amet eros eros, ac eleifend elit. Nunc volutpat urna non dui pulvinar quis mattis nisl eleifend. In ornare enim eget nisi congue tempor ut eget orci. Non dui pulvinar quis mattis nisl eleifend. In ornare enim eget nisi congue tempor ut eget orci. </p>
         <pre>Lorem 
         ipsum dolor sit amet, consectetuer adipiscing elit. Nullam
@@ -72,65 +72,78 @@ consectetuer adipiscing elit. Nullam dignissim convallis est.
             </div>
         </div>
     </div>
-    <div class="g2 col last">
+    <div class="g2 col device-half last">
         <p>Praesent dolor leo, mollis non lobortis in, consequat sed nisi. Proin vel orci augue, ut commodo erat. Nullam non tincidunt nunc. In turpis tellus, placerat eu fringilla sit amet, molestie egestas urna. Vestibulum sit amet eros eros, ac eleifend elit. Nunc volutpat urna non dui pulvinar quis mattis nisl eleifend. In ornare enim eget nisi congue tempor ut eget orci. Non dui pulvinar quis mattis nisl eleifend. In ornare enim eget nisi congue tempor ut eget orci. </p>
     </div>
 </div>
 <hr />
 <div class="row">
-    <div class="g3 col">
-        <h5>Unordered <code>&lt;ul&gt;</code></h5>
+    <div class="g3 device-half col">
+        <h5>lists</h5>
         <ul>
             <li>Lorem ipsum dolor sit amet</li>
             <li>Consectetur adipiscing elit</li>
-            <li>Integer molestie lorem at massa</li>
-            <li>Facilisis in pretium nisl aliquet</li>
-            <li>Nulla volutpat aliquam velit
-            <ul>
-                <li>Phasellus iaculis neque</li>
-                <li>Purus sodales ultricies</li>
-                <li>Vestibulum laoreet porttitor sem</li>
-                <li>Ac tristique libero volutpat at</li>
-            </ul>
-            </li>
-            <li>Faucibus porta lacus fringilla vel</li>
-            <li>Aenean sit amet erat nunc</li>
             <li>Eget porttitor lorem</li>
+            <li><p>Praesent dolor leo, mollis non lobortis in, consequat sed nisi. Proin vel orci augue, ut commodo erat. Nullam non tincidunt nunc.</p></li>
         </ul>
-    </div>
-    <div class="g3 col">
-        <h5>Unstyled <code>&lt;ul.unstyled&gt;</code></h5>
-        <ul class="unstyled">
-            <li>Consectetur adipiscing elit</li>
-            <li>Facilisis in pretium nisl aliquet</li>
-            <li>Nulla volutpat aliquam velit
-            <ul>
-                <li>Phasellus iaculis neque</li>
-                <li>Purus sodales ultricies</li>
-                <li>Vestibulum laoreet porttitor sem</li>
-                <li>Ac tristique libero volutpat at</li>
-            </ul>
-            </li>
-            <li>Faucibus porta lacus fringilla vel</li>
-            <li>Aenean sit amet erat nunc</li>
-            <li>Eget porttitor lorem</li>
-        </ul>
-    </div>
-    <div class="g3 col">
-        <h5>Ordered <code>&lt;ol&gt;</code></h5>
         <ol>
+            <li>Phasellus iaculis neque</li>
+            <li>Purus sodales ultricies</li>
+            <li>Ac tristique libero volutpat at</li>
+        </ul>
+    </div>
+    <div class="g3 device-half-last col">
+        <h5>unstyle &lt;ul&gt;</h5>
+        <ul class="unstyle">
+            <li>Lorem ipsum dolor sit amet</li>
             <li>Consectetur adipiscing elit</li>
-            <li> Integer molestie lorem at massa
+            <li>Eget porttitor lorem</li>
+            <li><p>Praesent dolor leo, mollis non lobortis in, consequat sed nisi. Proin vel orci augue, ut commodo erat. Nullam non tincidunt nunc.</p></li>
+        </ul>
+        <ol class="unstyle">
+            <li>Phasellus iaculis neque</li>
+            <li>Purus sodales ultricies</li>
+            <li>Ac tristique libero volutpat at</li>
+        </ul>
+    </div>
+    <div class="g3 device-half col">
+        <h5>nested <code>&lt;ol&gt;</code></h5>
+        <ul>
+            <li>Lorem ipsum dolor sit amet</li>
+            <li>Met sit ipsum
+                <ul>
+                    <li>Lorem ipsum dolor sit amet</li>
+                    <li>Eget porttitor lorem</li>
+                </ul>
+            </li>
+            <li>Consectetur adipiscing elit</li>
+            <li>Met sit ipsum
                 <ol>
-                    <li>Aenean sit amet erat nunc</li>
+                    <li>Lorem ipsum dolor sit amet</li>
                     <li>Eget porttitor lorem</li>
                 </ol>
             </li>
-            <li>Aenean sit amet erat nunc</li>
+            <li>Eget porttitor lorem</li>
+        </ul>
+        <ol>
+            <li>Phasellus iaculis neque</li>
+            <li>Consectetur adipiscing elit
+                <ul>
+                    <li>Consectetur adipiscing elit</li>
+                    <li>Eget porttitor lorem</li>
+                </ul>
+            </li>
+            <li>Consectetur adipiscing elit</li>
+            <li>Consectetur adipiscing elit
+                <ol>
+                    <li>Consectetur adipiscing elit</li>
+                    <li>Eget porttitor lorem</li>
+                </ol>
+            </li>
             <li>Eget porttitor lorem</li>
         </ol>
     </div>
-    <div class="g3 col last">
+    <div class="g3 col device-half last">
         <h5>Description <code>dl</code></h5>
         <dl>
             <dt>Description lists</dt>
@@ -143,4 +156,3 @@ consectetuer adipiscing elit. Nullam dignissim convallis est.
         </dl>
     </div>
 </div>
-
