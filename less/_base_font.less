@@ -1,0 +1,81 @@
+body {
+    font-size:   @globalfont;
+    font-family: @fontfamily;
+}
+
+h1,h2,h3,h4,h5,h6,strong { font-weight: bold; }
+
+.huge       { font-size:  @globalfont * 14;    line-height:  0.95em }
+h1,.h1      { font-size:  @globalfont * 4.24;  line-height:  1.1em }
+h2,.h2      { font-size:  @globalfont * 2.62;  line-height:  1.24em }
+h3,.h3      { font-size:  @globalfont * 2.15;  line-height:  1.2em  }
+h4,.h4      { font-size:  @globalfont * 1.63;  line-height:  1.4em  }
+h5,.h5      { font-size:  @globalfont * 1.4;   line-height:  1.3em  }
+h6,.h6, p,
+dt, dd,li   { font-size:  @globalfont * 1;     line-height:  1.7em  }
+small       { font-size:  @globalfont * 0.625; }
+
+i, em { font-style: italic;}
+a     { text-decoration:none; }
+sup   { font-size:xx-small;  vertical-align:text-top;     margin:0px 2px }
+sub   { font-size:xx-small;  vertical-align:text-bottom;  margin:0px 2px }
+
+/* consistent margin */
+h1, h2, h3, h4, h5, h6, i, em, a,
+p, ul, ol, pre, blockquote,
+textarea, button, strong, small,
+.huge, .h1,.h2,.h3,.h4,.h5,.h6 
+{ margin: 5px 0 10px }
+
+
+/* fonts
+============================ */
+p.twisted {
+color: #424242;
+font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
+letter-spacing:0.1em;
+text-align:center;
+margin: 40px auto;
+text-transform: lowercase;
+line-height: 145%;
+font-size: 14pt;
+font-variant: small-caps;
+&:first-letter { text-transform: uppercase; }
+}
+
+.dropcap:first-letter  { float: left; font-size: 75px; line-height: 60px; padding-top: 4px; padding-right: 8px; padding-left: 3px; font-family: Georgia; }
+
+p.press {
+    background: #474747;
+    color:#222;
+    padding: 10px;
+    #shadow > .text-shadow(#555, 0 2px 3px);
+}
+
+p.presslight { color:#eee; background-color:#ddd; text-shadow: 0px -1px 2px #374683; padding:10px; }
+
+blockquote { color: #999; border-left: 2px solid #999; padding-left: 1em; }
+blockquote.mag { float:right; font-family:Georgia, Arial, Serif; font-size:1.25em; background:none; width:150px; border-top:#4C739E 3px solid; border-bottom:#4C739E 3px solid; border-left:none; margin:1em; padding:1em; color:#4C739E; }
+
+blockquote.quote {
+    quotes:"\201C""\201D";
+    /* quotes:"\201C""\201D""\2018""\2019"; */
+    border:0;
+        &:before {
+            color:#ccc;
+            content:open-quote;
+            font-size:6em;
+            line-height:.8em;
+            margin-left:-.6em;
+            vertical-align:-.4em;
+            float:left;
+        }
+
+        .author a {
+            font-weight:bold;
+            color: darken( @blue, 10% );
+            &:hover { color: darken( @blue, 20% ); }
+        }
+}
+
+pre { border:1px dashed #E1E1E1; color:#333344; background:#FAFAFA; font-family:monospace; overflow:auto; font-size:11px; padding:1em; }
