@@ -1,5 +1,8 @@
 # LessXLess
 
+**demo :** http://devric.co.cc/lessxless
+
+
 ### index
 ---
 1. Description
@@ -11,10 +14,38 @@
 
 ### 1. Description
 ---
-modular based css (OOCSS), written with less
+
+**About: **
+
+This OOCSS framework is based on less.js
+
+It is suitable for front end designers! NOT developers, it only provides basic style and helpers classes/mixings.
+
+The classes that work straight out of the box are the modules and the basic site layout, everything else is mixings
+
+**Features : **
+- fluid grid( max 16, default 12, set in style.css )
+- modular based ( can be light as 8kbs or full powered )
+- ongoing development in mixings
+- super flexible
+- elastic design for multiple resolutions
+
+**Local Demo : **
+
+Note, if you are using a webkit browser( chrome, safari ) you will need to browse with a server(or localhost) due to the samples are in 
+seperate files and load via ajax.
+
+*currently in development stage, but feel free to use.*
 
 **Usage :**
-make all edits and override in style.less load style.less or precompile and 
+
+make all edits and override in style.less, 
+
+load style.less or precompile to normal css file.
+
+have a look through plugins and mixings to create fast UI components. simply overrides the default components to suit your needs.
+
+
 
 **Requirement :**
 
@@ -31,6 +62,9 @@ windows users
 
 - use node compiler
 
+
+
+Have fun :)
 
 ### 2. classes
 ---
@@ -155,6 +189,13 @@ windows users
 
 ### 5. Todos
 ---
+- icons
+- slideshow
+- tab
+- form
+
 
 ### 6. Changelog
 ---
+
+
