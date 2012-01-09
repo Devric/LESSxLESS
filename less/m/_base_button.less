@@ -1,0 +1,72 @@
+.btn, button {
+    color:          #333;
+    background:     #eee;
+    width:          130px;
+    padding:        8px 5px;
+    border:         1px solid #ccc;
+    border-bottom:  1px solid #bbb;
+    text-align:     center;
+    text-shadow:    0 1px 0 #eee;
+    font: bold 11px "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+
+    #border > .border-radius(3px);
+    #gradient > .v (#eee, #ccc);
+}
+
+    .btn:hover, button:hover {
+        background-color:  #dddddd;
+        border:            1px solid #bbb;
+        border-bottom:     1px solid #999;
+        cursor:            pointer;
+        #gradient > .v (#ddd, #bbb);
+    }
+
+    .btn:active, button:active {
+        border: 1px solid #aaa;
+        border-bottom: 1px solid #888;
+        #shadow > .inset-box-shadow( 0,0,5px,2px, #aaa, 0 1px 0 0 #eee);
+    }
+
+
+
+/*  <button disabled="disabled" >Submit</button> */
+    button[disabled],
+    button[disabled]:hover,
+    button[disabled]:active {
+        border:       0;
+        color:        #aaa;
+        background:   #999;
+        text-shadow:  none;
+        cursor: not-allowed;
+        #shadow > .shadow(none);
+}
+
+/* shapes */
+button.pill   { #border > .border-radius(30px); }
+button.strong { @h:35px; height:@h; min-height:@h; max-height:@h; padding:5px 10px; }
+button.small  { @h:25px; height:@h; min-height:@h; max-height:@h; padding:3px 6px; }
+
+/* colours */
+
+.defaultBtn ( @bcolor: @grey, @color:black ) { 
+    color:       @color;
+    background:  @bcolor;
+    border:      1px solid darken(@bcolor,  5%);
+    text-shadow: 0 1px 0 @bcolor;
+
+    #gradient > .v (@bcolor, darken(@bcolor, 15%));
+
+    &:hover { 
+        background:  darken(@bcolor, 5%);
+        border:      1px solid darken(@bcolor,5%);
+        #gradient > .v (darken(@bcolor, 5%), darken(@bcolor, 20%));
+    }
+    
+    &:active {
+        border: 1px solid darken(@bcolor,10%);
+        border-bottom: 1px solid darken(@bcolor,25%);
+        #shadow > .inset2( 0 0 5px 2px darken(@bcolor, 15%), inset 0 1px 0 0 darken(@bcolor,5%));
+    }
+}
+
+button.blue   { .defaultBtn (@blue, white); }

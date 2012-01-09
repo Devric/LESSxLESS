@@ -1,53 +1,16 @@
-@import "_reset";
-@import "_var";
-@import "_utility";
-@import "_mixin";
-@import "_layout";
+// load all styles
+@import "_config";
 
-@import "_base_font";
-@import "_base_grid";
-@import "_base_form";
-@import "_base_table";
-@import "_base_list";
-
-@import "_base_button";
-@import "_nav";
-@import "_modules";
-
-//plugins
-@import "_plugin_button_drib";
-@import "_plugin_button_push";
-@import "_plugin_button_slim";
-//@import "_plugin_font_hgroup";
-//@import "_plugin_button_pulse";
-//@import "_plugin_button_sexy";
-//@import "_plugin_button_hex";
-//@import "_plugin_form_sexy";
-//@import "_plugin_form_quill"; // <link href='http://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
-//@import "_plugin_effect_sexyshadow";
-//@import "_plugin_utility_linkicon"; // the icon is not yet set
-//@import "_plugin_counter";
-
-//media screens, only if required
-@import "_media";
-
-
-//
-//
-//    Replace the old to new mixings!!!
-//      #shadow > .shadow, .inset, .text
-//
-//
-
-
-
-/* basic setup
-========================= */
+/* font type */
+@globalfont: 1em;
+@fontfamily: Palatino, 'Palatino Linotype', 'Book Antiqua', FreeSerif, Gerogia, serif;
 
 //grids variables
 @grids: 12; //# of grids, up to 16
 @gut: 1.6%; //gutter width
 
+/* html layout setup
+========================= */
 html {
                 /* flow-x, flow-y */
     #sitebase > .html( hidden, auto );
@@ -55,15 +18,12 @@ html {
 
 body {             /* height, padding  */
     #sitebase > .body(100%, 0);
-    // behavior: url("css/csshover3.htc"); // remove the less comment to use for :hover,:active,:focus to work on all element in ie6, it is related to html not css file
+    // behavior: url("css/csshover3.htc"); // remove comment for :hover,:active,:focus to work on all element in ie6, it is related to html not css file
 }
 #site{              /* width , height , bgcolor */
     #sitebase > .site( 960px , 100%   , @white);
 }
 
-/* font type */
-@globalfont: 1em;
-@fontfamily: Palatino, 'Palatino Linotype', 'Book Antiqua', FreeSerif, Gerogia, serif;
 
 /* font link color */
 a {
@@ -83,3 +43,13 @@ a {
 header {  }
 section{ margin-bottom:80px;}
 footer {  }
+
+
+
+/* element from mixings
+========================= */
+button.green  { .defaultBtn (@green, white); }
+//button.yellow { .defaultBtn (@yellow, white); }
+//button.pink   { .defaultBtn (@pink, white); }
+//button.orange { .defaultBtn (@orange, white); }
+//button.red    { .defaultBtn (@red, white); }
