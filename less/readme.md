@@ -13,8 +13,10 @@
 ---
 modular based css (OOCSS), written with less
 
+**Usage :**
+make all edits and override in style.less load style.less or precompile and 
 
-**usage :**
+**Requirement :**
 
 web based
 
