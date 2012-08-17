@@ -1,0 +1,16 @@
+//grids variable doubled in style.less
+//@grids: 12; //# of grids, up to 16
+//@gut: 2.6%; //gutter width
+
+/* mini col */
+.half   { width: ( ( 100% + @gut ) / 2 ) - @gut }
+.third  { width: ( ( 100% + @gut ) / 3 ) - @gut }
+.fourth { width: ( ( 100% + @gut ) / 4 ) - @gut }
+.fifth  { width: ( ( 100% + @gut ) / 5 ) - @gut }
+.sixth  { width: ( ( 100% + @gut ) / 6 ) - @gut }
+
+.half, .third, .fourth, .fifth, .sixth 
+{ margin-right: @gutter; } /* apply margin */
+
+.half.last, .third.last, .fourth.last, .fifth.last, .sixth.last
+{ margin-right: 0; float:right } /* remove last margin */
